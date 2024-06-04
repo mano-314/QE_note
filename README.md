@@ -95,6 +95,12 @@ For the different ways to consider the bias potential, the example 5) using meth
 - Charged slab (vacuum/slab/metal)
 - Slab under an electric field (metal/slab/metal)
 
+
+
+--------------------------
+
+will be updated later 
+
 ### 4. **IMPLICIT SOLVENT**
 1) Linearized Poisson-Boltzmann model
 
