@@ -8,7 +8,7 @@
 
 ---------------------------------------------
 
-SET UP AN ENVIRONMENT
+## SET UP AN ENVIRONMENT
 
 to use qe, we need to load intel module
 ```
@@ -46,7 +46,8 @@ _ASE is already install in this cluster, but we need to modify the code to make 
 
 ---------------------------------------------
 
-1. **BULK**
+##CONTENT 
+### 1. **BULK**
 
 QE was developed based on plane wave representation for solving KS-equation.
 It was fitted for the calculation in solid states, which is the original spirit of QE.
@@ -58,7 +59,7 @@ We will start from looking at the representative properties; band structures and
 
 #---------------------------------------------
 
-2. **MOLECULE**
+### 2. **MOLECULE**
 
 In the study of electrochemical system, the calculations involving the isolated molecule (or isolated system/ 2D) are required. 
 Moreover, the calculation of vibrational properties is very important in determining the ZPE, entropy and so on.
@@ -78,7 +79,7 @@ By performing the planar average, the density profile in particular direction ca
 
 #---------------------------------------------
 
-3. **ELECTROSTATIC**
+### 3. **ELECTROSTATIC**
 
 We have seen from the previous section that the electrostatic potential of the non-zero dipole system under periodic treatment is difficult to define.
 Here, we are provided with two methods to treat the dipole;
