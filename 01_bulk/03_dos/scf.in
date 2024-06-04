@@ -1,0 +1,47 @@
+&CONTROL
+   calculation      = 'vc-relax'
+   nstep            = 200
+   tprnfor          = .true.
+   outdir           = './output'
+   prefix           = 'opt'
+   pseudo_dir       = '../../pseudo/'
+   etot_conv_thr    = 1.0D-4
+   forc_conv_thr    = 1.0D-3
+/
+&SYSTEM
+   ibrav            = 0
+   ntyp             = 1
+   nat              = 1
+   ecutwfc          = 40
+   ecutrho          = 320.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'm-p'
+   nspin            = 2
+   starting_magnetization(1) = 1
+/
+&ELECTRONS
+   electron_maxstep = 100
+   conv_thr         = 1e-08
+   mixing_beta      = 0.6
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Cu 63.546 cu_pbe_v1.2.uspp.F.UPF
+
+K_POINTS automatic
+4 4 4  1 1 1
+
+CELL_PARAMETERS (angstrom)
+   0.000000000   1.822198146   1.822198146
+   1.822198146   0.000000000   1.822198146
+   1.822198146   1.822198146   0.000000000
+
+ATOMIC_POSITIONS (angstrom)
+Cu               0.0000000000        0.0000000000        0.0000000000
+
+

@@ -1,0 +1,42 @@
+&CONTROL
+   calculation      = 'nscf'
+   outdir           = './output'
+   prefix           = 'opt'
+   pseudo_dir       = '../../pseudo/'
+/
+&SYSTEM
+   ibrav            = 0
+   ntyp             = 1
+   nat              = 1
+   ecutwfc          = 40
+   ecutrho          = 320.0
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'm-p'
+   nspin            = 2
+   starting_magnetization(1) = 1
+/
+&ELECTRONS
+   conv_thr         = 1e-08
+   mixing_beta      = 0.6
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Cu 63.546 cu_pbe_v1.2.uspp.F.UPF
+
+CELL_PARAMETERS (angstrom)
+   0.000000000   1.822198146   1.822198146
+   1.822198146   0.000000000   1.822198146
+   1.822198146   1.822198146   0.000000000
+
+ATOMIC_POSITIONS (angstrom)
+Cu               0.0000000000        0.0000000000        0.0000000000
+
+K_POINTS automatic
+16 16 16 1 1 1
+
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CHG_com="chgsum.pl"
+BAD_com="bader"
+
+$CHG_com AECCAR0 AECCAR2
+$BAD_com CHGCAR -ref CHGCAR_sum

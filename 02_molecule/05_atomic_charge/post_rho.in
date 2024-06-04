@@ -1,0 +1,16 @@
+&inputpp
+    prefix  = 'opt'
+    outdir = 'output'
+    filplot = 'optcharge'
+    plot_num= 0
+/
+&plot
+    nfile = 1
+    filepp(1) = 'optcharge'
+    weight(1) = 1.0
+    iflag = 3
+    output_format = 6
+    fileout = 'distribution_rho.cube'
+    nx=160,ny=160,nz=160
+/
+

@@ -1,0 +1,6 @@
+&bands
+prefix         ='opt' 
+outdir         ='./output'
+spin_component = 1
+filband        ='upspin.bands'
+/

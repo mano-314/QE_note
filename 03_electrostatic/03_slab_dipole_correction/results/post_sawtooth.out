@@ -1,0 +1,77 @@
+
+     Program POST-PROC v.7.2 starts on  4Jun2024 at 14:25:13 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    32 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      32
+     179692 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading xml data from directory:
+
+     output/opt.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          64      32      8                13804     4878     692
+     Max          65      33      9                13839     4905     719
+     Sum        2053    1027    283               442007   156319   22723
+ 
+     Using Slab Decomposition
+ 
+
+     negative rho (up, down):  1.937E-03 0.000E+00
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1944 Ry au,         -0.4940 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0600 Ry
+        Total length         56.1249 bohr
+ 
+
+     Calling punch_plot, plot_num =  12
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1944 Ry au,         -0.4940 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0600 Ry
+        Total length         56.1249 bohr
+ 
+     Writing data to file  optcharge
+     Reading data from file  optcharge
+
+     Writing data to be plotted to file sawtooth.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+ 
+     POST-PROC    :      1.13s CPU      1.56s WALL
+
+ 
+   This run was terminated on:  14:25:14   4Jun2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

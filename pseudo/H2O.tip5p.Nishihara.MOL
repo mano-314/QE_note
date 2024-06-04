@@ -1,0 +1,64 @@
+<MOL version="1.0.0">
+  <!--
+    Copyright (C) 2015 Satomichi Nishihara [nisihara225@gmail.com]
+  -->
+  <MOL_INFO>
+    Extended Simple Point Charge(SPC/E) model of Water,
+    although Lennad-Jones parameters of hydrogen are modified.
+    (M.Matsugami et al., J. Chem. Phys. 2014, 140, 104511)
+  </MOL_INFO>
+  <MOL_HEADER author="modified from file from S.Nishihara"
+              date="14Feb2024"
+              comment="Tip5P(Water)"
+              formula="H2O"
+              has_charge="T"
+              has_lj="T"
+              number_of_atoms="5"/>
+  <MOL_MASS type="real" size="1" columns="1" UNITS="g/mol">
+    18.01528
+  </MOL_MASS>
+  <MOL_DENSITY type="real" size="1" columns="1" UNITS="g/cm^3">
+    0.999972
+  </MOL_DENSITY>
+  <MOL_PERMITTIVITY type="real" size="1" columns="1">
+    78.5
+  </MOL_PERMITTIVITY>
+  <MOL_ELEMENT type="character" size="5" columns="1" len="5">
+O/h2o
+H/h2o
+H/h2o
+L/h2o
+L/h2o
+  </MOL_ELEMENT>
+  <MOL_XYZ type="real" size="15" columns="3" UNITS="angstrom">
+   0.00000  -0.06556   0.00000
+   0.75695   0.52032   0.00000
+  -0.75695   0.52032   0.00000
+   0.00000  -0.46971   0.57154
+   0.00000  -0.46971  -0.57154
+  </MOL_XYZ>
+  <MOL_CHARGE type="real" size="5" columns="1">
+     0.00
+    +0.241
+    +0.241
+    -0.241
+    -0.241
+  </MOL_CHARGE>
+  <MOL_LJ>
+    <MOL_EPSILON type="real" size="5" columns="1" UNITS="kcal/mol">
+      0.16
+      0.046
+      0.046
+      0.046
+      0.046
+    </MOL_EPSILON>
+    <MOL_SIGMA type="real" size="5" columns="1" UNITS="angstrom">
+      3.12
+      1.00
+      1.00
+      1.80
+      1.80
+    </MOL_SIGMA>
+  </MOL_LJ>
+</MOL>
+

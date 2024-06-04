@@ -1,0 +1,17 @@
+&inputpp
+    prefix  = 'opt'
+    outdir = 'output'
+    filplot = 'optcharge'
+    plot_num= 12
+/
+&plot
+    nfile = 1
+    filepp(1) = 'optcharge'
+    weight(1) = 1.0
+    iflag = 3
+    output_format = 6
+    fileout = 'sawtooth.cube'
+!    fileout = 'rho.cube'
+!    nx=100,ny=100,nz=100
+/
+

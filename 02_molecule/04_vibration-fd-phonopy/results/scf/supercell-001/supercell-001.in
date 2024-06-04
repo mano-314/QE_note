@@ -1,0 +1,39 @@
+&CONTROL
+   calculation      = 'scf'
+   outdir           = 'output'
+   prefix           = 'opt'
+   pseudo_dir       = '/beegfs/hotpool/mano/rism/RISM_example/pseudo'
+   disk_io          = "nowf"
+   tprnfor          = .true.
+/
+&SYSTEM
+   ibrav            = 0
+   ecutwfc          = 40
+   ecutrho          = 320.0
+   nspin            = 1
+   ntyp             = 2
+   nat              = 3
+/
+&ELECTRONS
+   conv_thr         = 1e-08
+   mixing_beta      = 0.3
+/
+&IONS
+/
+&CELL
+/
+
+K_POINTS gamma
+
+!    ibrav = 0, nat = 3, ntyp = 2
+CELL_PARAMETERS bohr
+   18.8972613704969028    0.0000000000000000    0.0000000000000000
+    0.0000000000000000   18.8972613704969028    0.0000000000000000
+    0.0000000000000000    0.0000000000000000   18.8972613704969028
+ATOMIC_SPECIES
+  O   15.99940   o_pbe_v1.2.uspp.F.UPF
+  H    1.00794   h_pbe_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS crystal
+  O   0.5006110412063105  0.5006110412063105  0.5311278412063104
+  H   0.4999999999999999  0.5769176000000000  0.4698339000000000
+  H   0.4999999999999999  0.4230824000000000  0.4698339000000000

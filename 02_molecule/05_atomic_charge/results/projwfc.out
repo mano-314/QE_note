@@ -1,0 +1,105 @@
+
+     Program PROJWFC v.7.2 starts on  4Jun2024 at 13:40:28 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     4 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+     183683 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading xml data from directory:
+
+     ./output/opt.save/
+     file O.pbe-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  2S 2P renormalized
+     file H.pbe-kjpaw_psl.1.0.0.UPF: wavefunction(s)  1S renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        3409    1134    282               299621    57596    7167
+     Max        3410    1135    283               299623    57599    7168
+     Sum       13637    4537   1129              1198487   230389   28671
+ 
+     Using Slab Decomposition
+ 
+
+     negative rho (up, down):  1.051E-03 0.000E+00
+
+     Gaussian broadening (read from input): ngauss,degauss=   0    0.010000
+
+
+     Calling projwave .... 
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  2*  2 procs)
+
+     linear algebra parallelized on   4 procs
+ 
+  Problem Sizes 
+  natomwfc =            6
+  nx       =            3
+  nbnd     =            4
+  nkstot   =            1
+  npwx     =         7168
+  nkb      =           12
+ 
+
+     Atomic states used for projection
+     (read from pseudopotential files):
+
+     state #   1: atom   1 (O  ), wfc  1 (l=0 m= 1)
+     state #   2: atom   1 (O  ), wfc  2 (l=1 m= 1)
+     state #   3: atom   1 (O  ), wfc  2 (l=1 m= 2)
+     state #   4: atom   1 (O  ), wfc  2 (l=1 m= 3)
+     state #   5: atom   2 (H  ), wfc  1 (l=0 m= 1)
+     state #   6: atom   3 (H  ), wfc  1 (l=0 m= 1)
+
+ k =   0.0000000000  0.0000000000  0.0000000000
+==== e(   1) =   -25.09843 eV ==== 
+     psi = 0.714*[#   1]+0.118*[#   5]+0.118*[#   6]+0.038*[#   2]
+    |psi|^2 = 0.988
+==== e(   2) =   -12.83547 eV ==== 
+     psi = 0.690*[#   4]+0.143*[#   5]+0.143*[#   6]
+    |psi|^2 = 0.977
+==== e(   3) =    -9.21456 eV ==== 
+     psi = 0.808*[#   2]+0.123*[#   1]+0.027*[#   5]+0.027*[#   6]
+    |psi|^2 = 0.985
+==== e(   4) =    -7.08948 eV ==== 
+     psi = 0.990*[#   3]
+    |psi|^2 = 0.990
+
+Lowdin Charges: 
+
+     Atom #   1: total charge =   6.7256, s =  1.6735, 
+     Atom #   1: total charge =   6.7256, p =  5.0522, pz=  1.6920, px=  1.9793, py=  1.3809, 
+     Atom #   2: total charge =   0.5770, s =  0.5770, 
+     Atom #   2: total charge =   0.5770, p =  0.0000, pz=  0.0000, px=  0.0000, py=  0.0000, 
+     Atom #   3: total charge =   0.5770, s =  0.5770, 
+     Atom #   3: total charge =   0.5770, p =  0.0000, pz=  0.0000, px=  0.0000, py=  0.0000, 
+     Spilling Parameter:   0.0150
+ 
+     PROJWFC      :      0.72s CPU      0.93s WALL
+
+ 
+   This run was terminated on:  13:40:29   4Jun2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

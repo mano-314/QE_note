@@ -1,0 +1,9 @@
+&inputph
+ prefix     = 'opt',
+ outdir     = 'output',
+ amass(1)   = 15.999,      ! Atomic mass of each atomic type
+ amass(2)   = 1.008,       ! Atomic mass of each atomic type
+ tr2_ph     = 4.0d-17,     ! Threshold for self-consistency
+ fildyn     = 'dyn.xml',
+ /
+0.0 0.0 0.0
