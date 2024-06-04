@@ -1,9 +1,9 @@
 # QE_note
 
-The electrode-electrolyte interface simulation using Quantum espresso
+The electrode-electrolyte interface simulation using Quantum Espresso
 
 ---------------------------------------------
-requirements
+Requirements
 QE
 - pw.x / ph.x / pp.x / bands.x / dos.x / rism.x / pprism.x / rism1d.x
 
@@ -15,25 +15,35 @@ python
 SET UP AN ENVIRONMENT
 
 to use qe, we need to load intel module
+```
   $ module load intel22-openmpi-4.1.2
+```
 and don't forget to put this in jobscript file too
 
 to use python, we need to load anaconda module
+```
   $ module load anaconda3.8
   $ source ~/.bashrc
+```
 
 and it will be better to create your own environment,
 for example, to make the environment with python3.9 named rism,
+```
   $ conda create -n rism python=3.9
   $ conda activate rism
+```
 
 and we need ase and phonopy, which can be easily installed by
+```
   $ pip install ase
   $ pip install phonopy
+```
 
 and to activate this in compute node, put the following command into jobscript file
+```
   $ source ~/.bashrc
   $ conda activate rism
+```
 
    < NOTE >
    ASE is already install in this cluster, but we need to modify the code to make it
@@ -41,7 +51,7 @@ and to activate this in compute node, put the following command into jobscript f
 
 ---------------------------------------------
 
-BULK
+1. **BULK**
 
 QE was developed based on plane wave representation for solving KS-equation.
 It was fitted for the calculation in solid states, which is the original spirit of QE.
@@ -54,7 +64,7 @@ representative ones; band structures and density of states
 
 #---------------------------------------------
 
-MOLECULE
+2. **MOLECULE**
 
 In our study of electrochemical system, the calculation involving gthe isolated molecule is required,
 Furthermore, the calculation of vibrational frequencies is very important in determining the ZPE, entropy and so on.
@@ -73,7 +83,7 @@ how dipole of water affect of electrostatic potential.
 
 #---------------------------------------------
 
-ELECTROSTATIC
+3. **ELECTROSTATIC**
 
 We have seen from the previous section that the electrostatic potential of the non-zero dipole system is difficult to defined
 in a presence of periodic boundary condition. Here, we are provided with two methods to treate the dipole;
