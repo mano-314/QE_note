@@ -80,8 +80,8 @@ By performing the planar average, the density profile in particular direction ca
 
 We have seen from the previous section that the electrostatic potential of the non-zero dipole system under periodic treatment is difficult to define.
 Here, we are provided with two methods to treat the dipole;
-(I) the dipole correction in a recipe of [L. Bengtsson, PRB 59, 12301 (1999)]
-and (II) the open boundary recipe of [M. Otani and O. Sugino, PRB 73, 115407 (2006)]
+(I) the dipole correction in a recipe of _[L. Bengtsson, PRB 59, 12301 (1999)]_
+and (II) the open boundary recipe of _[M. Otani and O. Sugino, PRB 73, 115407 (2006)]_
 The examples using water molecule are presented in 1) and 2), while the slab models are shown in 3), 4) and 5).
 the example 3) follows (I) method which can be extended into the imposing of the constant electric field using sawtooth potential in 4).
 For the different ways to consider the bias potential, the example 5) using method (II) is provided here.
