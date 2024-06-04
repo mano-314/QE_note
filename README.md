@@ -44,9 +44,8 @@ conda activate rism
 _<NOTE>_
 _ASE is already install in this cluster, but we need to modify the code to make it available for using integrated with rism. That's why we need our own environment_
 
----------------------------------------------
 
-##CONTENT 
+## CONTENT 
 ### 1. **BULK**
 
 QE was developed based on plane wave representation for solving KS-equation.
@@ -57,7 +56,6 @@ We will start from looking at the representative properties; band structures and
 2) bandstructure
 3) dos
 
-#---------------------------------------------
 
 ### 2. **MOLECULE**
 
@@ -77,7 +75,6 @@ By performing the planar average, the density profile in particular direction ca
 5) atomic charge (Bader and Lowdin)
 6) rho and phi 
 
-#---------------------------------------------
 
 ### 3. **ELECTROSTATIC**
 
@@ -97,5 +94,31 @@ For the different ways to consider the bias potential, the example 5) using meth
 - Isolated slab (vacuum/slab/vacuum)
 - Charged slab (vacuum/slab/metal)
 - Slab under an electric field (metal/slab/metal)
+
+### 4. **IMPLICIT SOLVENT**
+1) Linearized Poisson-Boltzmann model
+
+### 5. **RISM (Reference interaction site model)**
+1) 1D-RISM : pair distribution & coordination number
+2) 1D-RISM : Force field setting and solvation energy 
+3) 3D-RISM : For periodic system 
+4) Laue RISM : periodic in xy-plane and opened in z-direction
+5) The determination of SHE potential 
+
+### 6. **ESM-RISM**
+1) The determination of PZC (potential of zero charge)
+2) Constant Ne (electrons) calculation 
+3) Constant mu (potential) calculation 
+4) Grand potential calculation 
+5) Adsorption energy as a function of potential
+
+
+### 7. **ASE (Atomic simulation environment)**
+1) How to make/manipulate structure from ASE
+2) How to optimize structure using ASE optimizer with QE as calculator 
+3) How to control QE from ASE script 
+4) How to calculate vibration 
+5) How to use ASE with RISM 
+
 
 
