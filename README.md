@@ -73,12 +73,13 @@ By performing the planar average, the density profile in particular direction ca
 3) vibration (fd-ase)
 4) vibration (fd-phonopy)
 5) atomic charge (Bader and Lowdin)
-6) rho and phi 
 
 
 ### 3. **ELECTROSTATIC**
 
-We have seen from the previous section that the electrostatic potential of the non-zero dipole system under periodic treatment is difficult to define.
+At the beginning of this section, the electron density and the electrostatic potential obtained from the calculation are extracted.
+By performing the planar average, the density profile in particular direction can be obtained.
+We will see that the electrostatic potential of the non-zero dipole system under periodic treatment is difficult to define and diverged.
 Here, we are provided with two methods to treat the dipole;
 (I) the dipole correction in a recipe of _[L. Bengtsson, PRB 59, 12301 (1999)]_
 and (II) the open boundary recipe of _[M. Otani and O. Sugino, PRB 73, 115407 (2006)]_
@@ -86,11 +87,12 @@ The examples using water molecule are presented in 1) and 2), while the slab mod
 the example 3) follows (I) method which can be extended into the imposing of the constant electric field using sawtooth potential in 4).
 For the different ways to consider the bias potential, the example 5) using method (II) is provided here.
 
-1) Dipole correction (H2O)
-2) Mixed boundary condition (H2O)
-3) Dipole correction (slab) 
-4) Constant electric field (sawtooth potential)
-5) Bias potential using ESM (Effective Screening Medium) 
+1) charge density and electrostatic potential 
+2) Dipole correction (H2O)
+3) Mixed boundary condition (H2O)
+4) Dipole correction (slab) 
+5) Constant electric field (sawtooth potential)
+6) Bias potential using ESM (Effective Screening Medium) 
 - Isolated slab (vacuum/slab/vacuum)
 - Charged slab (vacuum/slab/metal)
 - Slab under an electric field (metal/slab/metal)
