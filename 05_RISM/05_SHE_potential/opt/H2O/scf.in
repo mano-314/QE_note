@@ -1,0 +1,69 @@
+&CONTROL
+ calculation  = 'relax'
+ outdir       = 'output'
+ pseudo_dir   = '../pseudo'
+ prefix       = 'opt'
+ trism        = .true.
+ nstep        = 100
+/
+&SYSTEM
+ ibrav = 0,
+ ntyp = 2, 
+ nat = 3
+ nbnd = 20
+ ecutwfc = 40, 
+ ecutrho = 320
+ occupations = "smearing", 
+ smearing = "gauss", 
+ degauss = 0.01
+ assume_isolated = "esm", 
+ esm_bc = "bc1", 
+ tot_charge = 0.0
+/
+&ELECTRONS
+ electron_maxstep = 200, 
+ mixing_beta = 0.1, 
+! conv_thr = 1.0d-8
+! diagonalization = 'rmm', 
+! startingwfc = 'file'
+! startingpot = 'file'
+/
+&IONS
+ ion_dynamics = 'bfgs'
+ upscale = 1.d0
+/
+&RISM
+ nsolv = 3, 
+ closure  = 'kh'
+ tempv = 300, 
+ ecutsolv = 160
+ solute_lj(1) = 'none', solute_epsilon(1) = 0.1554, solute_sigma(1) = 3.166 !TIP5P O
+ solute_lj(2) = 'none', solute_epsilon(2) = 0.0460, solute_sigma(2) = 1.000 !modified H
+ laue_expand_left = 60
+ laue_expand_right = 60
+ rism3d_maxstep = 10000
+ rism3d_conv_thr = 1.0d-6
+ rism3d_conv_level = 0.5
+/
+
+K_POINTS gamma
+
+SOLVENTS {mol/L}
+H2O  -1.0  H2O.tip5p.Nishihara.MOL
+K+    1.0  K+.Hagiwara.MOL
+OH-   1.0  OH-.oplsaa.MOL
+
+ATOMIC_SPECIES
+O   16.00  o_pbe_v1.2.uspp.F.UPF
+H   1.008  h_pbe_v1.4.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+20.0 0.0 0.0
+0.0 20.0 0.0
+0.0 0.0 20.0
+
+ATOMIC_POSITIONS {angstrom}
+O        0.   0.   0.
+H        0.6  0.6  0.6
+H        0.6  0.6 -0.6
+

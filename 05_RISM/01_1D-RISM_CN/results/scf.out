@@ -1,0 +1,160 @@
+
+     Program RISM1D v.7.2 starts on  5Jun2024 at  9: 4:38 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    16 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+     160702 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from scf.in
+     Message from routine iosys_1drism:
+     default density from MOL file(H2O.tip5p.Nishihara.MOL) is used
+
+     Molecule # 1 for H2O read from file:
+     ../../pseudo/H2O.tip5p.Nishihara.MOL
+     Density:
+         0.26741625E+03 cell^-1
+         0.49533751E-02 bohr^-3
+         0.55506881E+02 mol/L
+         0.99997200E+00 g/cm^3
+     Permittivity:
+        78.500000
+     Number of atoms:   5
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  O/h2o     0.00000000   -0.06556000    0.00000000    0.00000000    0.16000000    3.12000000
+       2  H/h2o     0.75695000    0.52032000    0.00000000    0.24100000    0.04600000    1.00000000
+       3  H/h2o    -0.75695000    0.52032000    0.00000000    0.24100000    0.04600000    1.00000000
+       4  L/h2o     0.00000000   -0.46971000    0.57154000   -0.24100000    0.04600000    1.80000000
+       5  L/h2o     0.00000000   -0.46971000   -0.57154000   -0.24100000    0.04600000    1.80000000
+
+
+     Molecule # 2 for H3O+ read from file:
+     ../../pseudo/H3O+.chuev.MOL
+     Density:
+         0.48177136E+00 cell^-1
+         0.89238937E-05 bohr^-3
+         0.10000000E+00 mol/L
+         0.19023220E-02 g/cm^3
+     Number of atoms:   4
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  O/h3o     0.00000000    0.00000000    0.00000000   -0.55670000    0.15540000    3.16600000
+       2  H/h3o     0.93481800    0.00000000   -0.29413400    0.51890000    0.04600000    0.40000000
+       3  H/h3o    -0.46740900    0.80957600   -0.29413400    0.51890000    0.04600000    0.40000000
+       4  H/h3o    -0.46740900   -0.80957600   -0.29413400    0.51890000    0.04600000    0.40000000
+
+
+     Molecule # 3 for Cl- read from file:
+     ../../pseudo/Cl-.oplsaa.MOL
+     Density:
+         0.48177136E+00 cell^-1
+         0.89238937E-05 bohr^-3
+         0.10000000E+00 mol/L
+         0.35452700E-02 g/cm^3
+     Number of atoms:   1
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  Cl        0.00000000    0.00000000    0.00000000   -1.00000000    0.71000000    4.02000000
+
+
+     1D-RISM info
+     ------------
+     closure equation        =           KH
+     temperature             =     300.0000  kelvin
+     coulomb smearing radius =       2.0000  bohr
+     number of solvent sites =           10
+     number of grids         =         5973
+     maximum of R-space      =     999.8326  bohr
+     maximum of G-space      =      18.7632  bohr^-1
+     number of iterations    =        15000
+     convergence threshold   =      1.0E-08
+     Gaussian width of bonds =       0.0000  bohr
+     size of MDIIS           =           10
+     step of MDIIS           =       0.1000
+     number of processes     =           16
+
+
+     1D-RISM Calculation
+
+     iter. #     1  RMS(g-h-1)= 1.475E-03  nbox=  0  T= 2400.00K
+     iter. #   101  RMS(g-h-1)= 2.256E-06  nbox= 10  T= 1600.00K
+     iter. #   201  RMS(g-h-1)= 1.538E-06  nbox= 10  T= 1066.67K
+     iter. #   301  RMS(g-h-1)= 2.280E-06  nbox= 10  T=  711.11K
+     iter. #   401  RMS(g-h-1)= 5.508E-06  nbox= 10  T=  474.07K
+     iter. #   501  RMS(g-h-1)= 1.352E-06  nbox= 10  T=  474.07K
+     iter. #   601  RMS(g-h-1)= 1.050E-05  nbox= 10  T=  316.05K
+     iter. #   701  RMS(g-h-1)= 1.289E-06  nbox= 10  T=  316.05K
+     iter. #   801  RMS(g-h-1)= 1.208E-06  nbox= 10  T=  300.00K
+     iter. #   901  RMS(g-h-1)= 7.046E-07  nbox= 10  T=  300.00K
+     iter. #  1001  RMS(g-h-1)= 7.366E-08  nbox= 10  T=  300.00K
+     iter. #  1101  RMS(g-h-1)= 2.739E-08  nbox= 10  T=  300.00K
+     iter. #  1133  RMS(g-h-1)= 9.792E-09  nbox= 10  T=  300.00K
+
+     End of 1D-RISM calculation
+
+
+     convergence has been achieved in  1133 iterations
+
+
+     Chemical potential of solvation
+
+     H2O        H2O        Closure     -0.713660E+00 kcal/mol
+                           GaussFluct  -0.909319E+01 kcal/mol
+
+                H3O+       Closure     -0.146212E+00 kcal/mol
+                           GaussFluct  -0.159554E+00 kcal/mol
+
+                Cl-        Closure     -0.889399E-01 kcal/mol
+                           GaussFluct  -0.980609E-01 kcal/mol
+
+                Total      Closure     -0.948812E+00 kcal/mol
+                           GaussFluct  -0.935081E+01 kcal/mol
+
+     H3O+       H2O        Closure     -0.811578E+02 kcal/mol
+                           GaussFluct  -0.885634E+02 kcal/mol
+
+                H3O+       Closure      0.351511E+05 kcal/mol
+                           GaussFluct   0.351509E+05 kcal/mol
+
+                Cl-        Closure     -0.351715E+05 kcal/mol
+                           GaussFluct  -0.351715E+05 kcal/mol
+
+                Total      Closure     -0.101565E+03 kcal/mol
+                           GaussFluct  -0.109171E+03 kcal/mol
+
+     Cl-        H2O        Closure     -0.493678E+02 kcal/mol
+                           GaussFluct  -0.544306E+02 kcal/mol
+
+                H3O+       Closure     -0.351715E+05 kcal/mol
+                           GaussFluct  -0.351715E+05 kcal/mol
+
+                Cl-        Closure      0.351493E+05 kcal/mol
+                           GaussFluct   0.351493E+05 kcal/mol
+
+                Total      Closure     -0.715901E+02 kcal/mol
+                           GaussFluct  -0.766937E+02 kcal/mol
+
+
+     1D-RISM routines
+     1DRISM_pre   :      0.00s CPU      0.00s WALL (       1 calls)
+     1DRISM_run   :     12.29s CPU     12.62s WALL (       1 calls)
+ 
+     RISM1D       :     12.79s CPU     13.29s WALL
+
+ 
+   This run was terminated on:   9: 4:51   5Jun2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

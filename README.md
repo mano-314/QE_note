@@ -62,16 +62,14 @@ We will start from looking at the representative properties; band structures and
 In the study of electrochemical system, the calculations involving the isolated molecule (or isolated system/ 2D) are required. 
 Moreover, the calculation of vibrational properties is very important in determining the ZPE, entropy and so on.
 In this section, we will look at how to simulate the isolated molecule as well as the vibrational frequencies using
-two different approaches; density functional purterbation theory (DFPT) and the finite displacement method (FDM). 
-For FDM, which is not directly implemented in QE, the external tools (ASE and Phonopy) are introduced here.
+two different approaches; density functional purterbation theory (DFPT) and the finite displacement (FD) method. 
+For FD, which is not directly implemented in QE, the external tools (ASE and Phonopy) are introduced here.
 Next, the calculation of the atomic charge in Bader scheme will be introduced. 
-At the end of this section, the electron density and the electrostatic potential obtained from the calculation are extracted. 
-By performing the planar average, the density profile in particular direction can be obtained. 
 
 1) optimization
-2) vibration (dfpt)
-3) vibration (fd-ase)
-4) vibration (fd-phonopy)
+2) vibration (DFPT)
+3) vibration (FD-ase)
+4) vibration (FD-phonopy)
 5) atomic charge (Bader and Lowdin)
 
 
@@ -100,6 +98,7 @@ For the different ways to consider the bias potential, the example 5) using meth
 
 
 --------------------------
+
 
 **will be updated later**
 

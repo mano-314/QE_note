@@ -1,23 +1,34 @@
 &CONTROL
-   calculation      = 'relax'
-   outdir           = 'output'
-   prefix           = 'prefix'
-   pseudo_dir       = '/path/to/your/pseudo'
-   etot_conv_thr    = 1.0D-4
-   forc_conv_thr    = 1.0D-3
+   calculation      = 'relax'                ! describing the task to be performed
+   outdir           = 'output'               ! input, temporary, output files
+   prefix           = 'prefix'               ! prefix of calculation
+   pseudo_dir       = '/path/to/your/pseudo' ! path to pseudopotential files
+   etot_conv_thr    = 1.0D-4                 ! Convergence threshold on total energy (a.u) for ionic minimization
+   forc_conv_thr    = 1.0D-3                 ! Convergence threshold on forces (a.u) for ionic minimization
+   tprnfor          = .true.                 ! calculate forces
 /
 &SYSTEM
-   ibrav            = 0
-   ecutwfc          = 40
-   ecutrho          = 320.0
-   nspin            = 1
-   ntyp             = 2
-   nat              = 3
+   ibrav            = 0                      ! Bravais-lattice index
+   ntyp             = 2                      ! number of types of atoms in the unit cell
+   nat              = 3                      ! number of atoms in the unit cell
+   ecutwfc          = 40                     ! kinetic energy cutoff (Ry) for wavefunctions 
+   ecutrho          = 320.0                  ! Kinetic energy cutoff (Ry) for charge density and potential
+   nspin            = 1                      ! 1:non-polarized / 2:spin-polarized
+   nbnd             = 12                     ! Number of electronic states (bands) to be calculated
+   vdw_corr         = 'DFT-D3'               ! Type of Van der Waals correction
+   tot_charge       = 0.0                    ! Total charge of the system. In a periodic calculation a compensating jellium background is inserted
+   occupations      = 'smearing'             ! smearing, tetrahedra
+   smearing         = 'gaussian'             ! smearing method  
+   degauss          = 0.01                   ! value of the gaussian spreading (Ry)
 /
 &ELECTRONS
-   conv_thr         = 1e-06
+   electron_maxstep = 100                    ! maximum number of iterations in a scf step
+   conv_thr         = 1e-06                  ! Convergence threshold for selfconsistency
+   mixing_beta      = 0.7                    ! mixing factor for self-consistency
+   diagonalization  = 'david'                ! diagonalization
 /
 &IONS
+   ion_dynamics     = 'bfgs'                 ! Specify the type of ionic dynamics
 /
 &CELL
 /

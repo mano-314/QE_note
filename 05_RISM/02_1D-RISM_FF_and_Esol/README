@@ -1,0 +1,19 @@
+
+LJ parameters for H2O
+W1 > H2O.spce.Chuev.MOL
+W2 > H2O.spce.Nishihara.MOL
+W3 > H2O.spc.Nishihara.MOL
+W4 > H2O.tip5p.Nishihara.MOL
+W5 > H2O.spce.Matsugami.MOL 
+
+
+
+LJ parameters for H3O+
+H1 > H3O+.Bonthuls.Nishihara.MOL 
+H2 > H3O+.chuev.MOL
+
+
+LJ parameters for Cl-
+C1 > Cl-.Chuev.MOL 
+C2 > Cl-.oplsaa.MOL 
+
