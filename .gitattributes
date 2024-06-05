@@ -1,2 +1,3 @@
 *.gnu linguist-vendored
+*.in linguist-language=QE
 
