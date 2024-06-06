@@ -16,13 +16,13 @@ export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
 #--------------------------------------------------------------------------------------
 
 # 1) solving KS equation with periodic boudnary condition (xyz)
-#mpirun -n $NPROCS pw.x -in scf_pbc.in > scf_pbc.out
-#mv output/opt.esm1 profile_pbc.esm1
+mpirun -n $NPROCS pw.x -in scf_pbc.in > scf_pbc.out
+mv output/opt.esm1 profile_pbc.esm1
 
 # 2) solving KS equation with mixed boundary condition / open in z-direction 
 #    vacuum/slab/vacuum 
-#mpirun -n $NPROCS pw.x -in scf_bc1.in > scf_bc1.out
-#mv output/opt.esm1 profile_bc1.esm1
+mpirun -n $NPROCS pw.x -in scf_bc1.in > scf_bc1.out
+mv output/opt.esm1 profile_bc1.esm1
 
 # 3) solving KS equation with mixed boundary condition / open in z-direction
 #    vacuum/slab/metal

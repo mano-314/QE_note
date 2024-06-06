@@ -3,7 +3,7 @@
    tprnfor          = .true.
    outdir           = './output'
    prefix           = 'opt'
-   pseudo_dir       = '../../pseudo'
+   pseudo_dir       = '../../../pseudo'
 /
 &SYSTEM
    ibrav            = 0
@@ -16,9 +16,6 @@
    nspin            = 1
    ntyp             = 3
    nat              = 14
-   assume_isolated  = 'esm'
-   esm_bc           = 'bc3'
-   tot_charge       = -0.1,
 /
 &ELECTRONS
    electron_maxstep = 200
@@ -58,6 +55,9 @@ Cu               7.0488744325        4.0612323542        0.1260174534
 Cu               5.8486019780        3.3617502021        2.2051474495
 O                4.5028107593        2.5946618282        4.7340239143
 C                4.4995823328        2.5878773193        3.5533731102
+
+
+
 
 
 

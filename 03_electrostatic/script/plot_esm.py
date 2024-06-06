@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import sys 
 
+"""
+python plot_esm.py esm_1 esm_2 ... index 
+"""
+
 fileins=sys.argv[1:-1]
 index = int(sys.argv[-1])
 

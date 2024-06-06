@@ -2,8 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import sys 
 
-filenames=sys.argv[1:-1]
-int_axis=sys.argv[-1]
+"""
+python integrate_cube.py cube_1 cube_2 ... axis (fermi)
+"""
+
+try :
+    fermi = float(sys.argv[-1])
+    int_axis=sys.argv[-2]
+    filenames=sys.argv[1:-2]
+    print("read fermi as {}".format(fermi))
+except:
+    fermi = None 
+    filenames=sys.argv[1:-1]
+    int_axis=sys.argv[-1]
+    print("no fermi level provided")
 
 plotgraph = True
 
@@ -38,7 +50,7 @@ class readcube():
             self.positions = np.array(positions)
             self.atomic_numbers = atomic_numbers
 
-            N_vol_lines=int(self.Nx*self.Ny*self.Nz/6)
+            N_vol_lines=int(self.Nx*self.Ny* np.ceil(self.Nz/6) )
             volmetric=[]
             for iline in range(N_vol_lines):
                 line=f.readline().split()
@@ -100,7 +112,8 @@ for count,filename in enumerate(filenames):
         plt.scatter(pos[cubedata.tag],0,facecolors="black",edgecolors="black",
                     s=cubedata.axis_line.max()*10,alpha=0.2)
 
-    plt.plot([xmin, xmax],[0,0],lw=0.5,c='black')
+    plt.plot([xmin,xmax],[fermi,fermi],c="black",lw=1.0)
+#    plt.plot([xmin, xmax],[0,0],lw=0.5,c='black')
     plt.xlabel("{} axis ".format(int_axis) + "[$\AA$]", fontsize=14)
     plt.ylabel("$\int \\rho (\\vec{r}) dS$",fontsize=14)
     plt.xticks(fontsize=14);plt.yticks(fontsize=14)

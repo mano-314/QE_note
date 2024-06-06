@@ -3,7 +3,7 @@
    tprnfor          = .true.
    outdir           = './output'
    prefix           = 'opt'
-   pseudo_dir       = '../../pseudo'
+   pseudo_dir       = '../../../pseudo'
    tefield          = .true.
    dipfield         = .true.
 /

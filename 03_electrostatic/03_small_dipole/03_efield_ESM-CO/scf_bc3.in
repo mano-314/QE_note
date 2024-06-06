@@ -3,7 +3,7 @@
    tprnfor          = .true.
    outdir           = './output'
    prefix           = 'opt'
-   pseudo_dir       = '../../pseudo'
+   pseudo_dir       = '../../../pseudo'
 /
 &SYSTEM
    ibrav            = 0
@@ -17,7 +17,8 @@
    ntyp             = 3
    nat              = 14
    assume_isolated  = 'esm'
-   esm_bc           = 'bc1'
+   esm_bc           = 'bc3'
+   tot_charge       = -0.1,
 /
 &ELECTRONS
    electron_maxstep = 200

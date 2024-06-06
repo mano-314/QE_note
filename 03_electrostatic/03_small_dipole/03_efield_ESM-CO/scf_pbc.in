@@ -3,9 +3,7 @@
    tprnfor          = .true.
    outdir           = './output'
    prefix           = 'opt'
-   pseudo_dir       = '../../pseudo'
-   tefield          = .true.
-   dipfield         = .true.
+   pseudo_dir       = '../../../pseudo'
 /
 &SYSTEM
    ibrav            = 0
@@ -18,10 +16,8 @@
    nspin            = 1
    ntyp             = 3
    nat              = 14
-   edir             = 3
-   eamp             = -0.01
-   emaxpos          = 0.5
-   eopreg           = 0.01
+   assume_isolated  = 'esm'
+   esm_bc           = 'pbc'
 /
 &ELECTRONS
    electron_maxstep = 200

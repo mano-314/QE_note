@@ -20,9 +20,12 @@ export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
 mpirun -n $NPROCS pw.x -in scf_none.in > scf_none.out
 
 # 1.2) calculate electrostatic potential from the previous calculation
-mpirun -n $NPROCS pp.x -in post.in > post.out
+mpirun -n $NPROCS pp.x -in post_phi.in > post_phi.out
 mv electrostatic.cube electrostatic_none.cube
 
+# 1.3) calculate electrostatic potential from the previous calculation
+mpirun -n $NPROCS pp.x -in post_rho.in > post_rho.out
+mv rho.cube rho_none.cube
 
 
 #------------------------------------------------------------- WITH dipole correction
@@ -30,10 +33,14 @@ mv electrostatic.cube electrostatic_none.cube
 mpirun -n $NPROCS pw.x -in scf_dipole.in > scf_dipole.out
 
 # 2.2) calculate electrostatic potential from the previous calculation 
-mpirun -n $NPROCS pp.x -in post.in > post.out
+mpirun -n $NPROCS pp.x -in post_phi.in > post_phi.out
 mv electrostatic.cube electrostatic_dipole.cube
 
-# 2.3) extract sawtooth potential applied in the potential correction 
+# 2.3) calculate electrostatic potential from the previous calculation
+mpirun -n $NPROCS pp.x -in post_rho.in > post_rho.out
+mv rho.cube rho_dipole.cube
+
+# 2.4) extract sawtooth potential applied in the potential correction 
 mpirun -n $NPROCS pp.x -in post_sawtooth.in > post_sawtooth.out
 mv sawtooth.cube sawtooth_dipole.cube
 
