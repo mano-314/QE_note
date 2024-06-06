@@ -1,0 +1,45 @@
+&CONTROL
+   calculation      = 'relax'
+   tprnfor          = .true.
+   outdir           = './output'
+   prefix           = 'opt'
+   pseudo_dir       = '/project/lt200240-ccoxrr/mano/02_for_rism/pseudo'
+/
+&SYSTEM
+   ibrav            = 0
+   ecutwfc          = 40
+   ecutrho          = 320.0
+   degauss          = 0.01
+   nspin            = 1
+   ntyp             = 2
+   nat              = 3
+/
+&ELECTRONS
+   conv_thr         = 1e-08
+   mixing_beta      = 0.6
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+
+ATOMIC_SPECIES
+O 15.999 o_pbe_v1.2.uspp.F.UPF
+H 1.008 h_pbe_v1.4.uspp.F.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+10.00000000000000 0.00000000000000 0.00000000000000
+0.00000000000000 10.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 10.00000000000000
+
+ATOMIC_POSITIONS angstrom
+O 5.0000000000 5.0000000000 5.2981545000 
+H 5.0000000000 5.7632390000 4.7018455000 
+H 5.0000000000 4.2367610000 4.7018455000 
+
