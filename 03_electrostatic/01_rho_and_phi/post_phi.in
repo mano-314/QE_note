@@ -11,6 +11,5 @@
     iflag = 3
     output_format = 6
     fileout = 'distribution_phi.cube'
-!    nx=100,ny=100,nz=100
 /
 

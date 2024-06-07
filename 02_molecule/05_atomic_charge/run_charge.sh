@@ -17,6 +17,8 @@ export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
 
 
 # 1) perform scf calculation
+#    Since Bader is grid-based method, therefore the denser grid should give a more reliable integration 
+#    We can compare how sensitive the integrated charge is when number of grid charged
 mpirun -n $NPROCS pw.x -in scf.in > scf.out 
 
 # 2) post-process using pp.x to get charge density (valence from scf)

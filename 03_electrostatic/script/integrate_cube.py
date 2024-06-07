@@ -19,12 +19,14 @@ except:
 
 plotgraph = True
 
+#---------------------------------------------------- making class 
 class readcube():
 
     def __init__(self,filename):
         self.filename=filename
         self.loaddata()
     
+    #------------------------------------------------ import data from cube file 
     def loaddata(self):
         with open(self.filename) as f:
             f.readline()
@@ -59,6 +61,7 @@ class readcube():
             print("total mesh          : ", self.Nx*self.Ny*self.Nz)
             self.volmetric=np.array(volmetric).reshape(self.Nx,self.Ny,self.Nz) 
 
+    #------------------------------------------------ make an integration along the specify axis 
     def integrate_along(self,int_axis,fileout=True,unit="Angs"):
 
         if unit=="Angs":
@@ -92,6 +95,7 @@ class readcube():
                     fileout.write("{:12.8f}  {:12.8f}\n".format(_i,_j))
             print("saved to file       : {}".format(fileoutname))
 
+#----------------------------------------------------------------------
 
 if plotgraph :
     fig=plt.figure(figsize=(8,4))
@@ -101,7 +105,7 @@ for count,filename in enumerate(filenames):
     
     print( " --- reading # {}".format(count))
 
-    #--------------------------- load data
+    #--------------------------- load data and integrate
     cubedata=readcube(filename=filename)
     cubedata.integrate_along(int_axis,unit="Angs")
 
@@ -113,7 +117,7 @@ for count,filename in enumerate(filenames):
                     s=cubedata.axis_line.max()*10,alpha=0.2)
 
     plt.plot([xmin,xmax],[fermi,fermi],c="black",lw=1.0)
-#    plt.plot([xmin, xmax],[0,0],lw=0.5,c='black')
+    # plt.plot([xmin, xmax],[0,0],lw=0.5,c='black')
     plt.xlabel("{} axis ".format(int_axis) + "[$\AA$]", fontsize=14)
     plt.ylabel("$\int \\rho (\\vec{r}) dS$",fontsize=14)
     plt.xticks(fontsize=14);plt.yticks(fontsize=14)

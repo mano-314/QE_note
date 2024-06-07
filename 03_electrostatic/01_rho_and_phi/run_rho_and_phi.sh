@@ -16,13 +16,13 @@ export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
 #--------------------------------------------------------------
 
 
-# 1) perform scf calculation
+# 1) perform scf calculation to obtain charge density 
 mpirun -n $NPROCS pw.x -in scf.in > scf.out 
 
-# 2) post-process using pp.x to get charge density (valence from scf)
+# 2) post-process using pp.x to get charge density (valence from scf) in cube file format 
 mpirun -n $NPROCS pp.x -in post_rho.in > post_rho.out
 
-# 3) post-process using pp.x to get electrostatic potential
+# 3) post-process using pp.x to get electrostatic potential in cube file format
 mpirun -n $NPROCS pp.x -in post_phi.in > post_phi.out
 
-
+# 4) use some tools to visualize, integrate and so on 

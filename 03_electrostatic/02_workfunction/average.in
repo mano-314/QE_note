@@ -4,3 +4,30 @@ optcharge
 25
 3
 30.0
+
+
+  !      Input variables
+  !
+  !      nfile        the number of files contaning the desired quantities
+  !                   All files must refer to the same physical system!
+  ! for each file:
+  !      filename     the name of the n-th file
+  !      weight       the weight w_n of the quantity read from n-th file
+  !      .
+  !      .
+  ! end
+  !      npt          the number of points for the final interpolation of
+  !                   the planar and macroscopic averages, as written to file
+  !                   If npt <= N_idir (see below) no interpolation is done,
+  !                   the N_idir FFT points in direction idir are printed.
+  !      idir         1,2 or 3. Planar average is done in the plane orthogonal
+  !                   to direction "idir", as defined for the crystal cell
+  !      awin         the size of the window for macroscopic average (a.u.)
+  !
+  ! Format of output file avg.dat:
+  !    x   p(x)   m(x)
+  ! where
+  !    x = coordinate (a.u) along direction idir
+  !        x runs from 0 to the length of primitive vector idir
+  !  p(x)= planar average, as defined above
+  !  m(x)= macroscopic average, as defined above

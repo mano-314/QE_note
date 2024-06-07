@@ -11,7 +11,5 @@
     iflag = 3
     output_format = 6
     fileout = 'sawtooth.cube'
-!    fileout = 'rho.cube'
-!    nx=100,ny=100,nz=100
 /
 
