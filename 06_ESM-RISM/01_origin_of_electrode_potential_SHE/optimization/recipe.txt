@@ -1,0 +1,46 @@
+
+SOLVENTS {mol/L}
+
+!------- water
+H2O  -1.0  H2O.tip5p.Nishihara.MOL
+H2O  -1.0  H2O.spce.Nishihara.MOL
+
+!------- 1M-KOH solution
+K+    1.0  K+.Hagiwara.MOL
+OH-   1.0  OH-.oplsaa.MOL
+
+!------- 1M-HCl solution
+Cl-   1.0  Cl-.oplsaa.MOL
+H3O+  1.0  H3O+.Bonthuls.Nishihara.MOL
+
+!-----------------------------------------------
+
+example) 
+> recipe#1
+H2O  -1.0  H2O.tip5p.Nishihara.MOL
+K+    1.0  K+.Hagiwara.MOL
+OH-   1.0  OH-.oplsaa.MOL
+
+> recipe#2
+H2O  -1.0  H2O.tip5p.Nishihara.MOL
+Cl-   1.0  Cl-.oplsaa.MOL
+H3O+  1.0  H3O+.Bonthuls.Nishihara.MOL
+
+> recipe#3
+H2O  -1.0  H2O.spce.Nishihara.MOL
+K+    1.0  K+.Hagiwara.MOL
+OH-   1.0  OH-.oplsaa.MOL
+
+> recipe#4
+H2O  -1.0  H2O.spce.Nishihara.MOL
+Cl-   1.0  Cl-.oplsaa.MOL
+H3O+  1.0  H3O+.Bonthuls.Nishihara.MOL
+
+
+!-----------------------------------------------
+
+The configurations were optimized using 
+H2O  -1.0  H2O.tip5p.Nishihara.MOL
+K+    1.0  K+.Hagiwara.MOL
+OH-   1.0  OH-.oplsaa.MOL
+

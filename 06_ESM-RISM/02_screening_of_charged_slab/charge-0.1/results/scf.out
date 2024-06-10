@@ -1,0 +1,824 @@
+
+     Program PWSCF v.7.3.1 starts on  9Jun2024 at 15:53: 1 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    32 processors
+
+     MPI processes distributed on     1 nodes
+     144601 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from scf.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     Message from routine iosys_1drism:
+     default density from MOL file(H2O.tip5p.Nishihara.MOL) is used
+     Found identity + ( -0.0000 -0.5000  0.0000) symmetry
+     This is a supercell, fractional translations are disabled
+ 
+     R & G space division:  proc/nbgrp/npool/nimage =      32
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Molecule # 1 for H2O read from file:
+     ../../../pseudo/H2O.tip5p.Nishihara.MOL
+     Density:
+         0.23069113E+02 cell^-1
+         0.49533751E-02 bohr^-3
+         0.55506881E+02 mol/L
+         0.99997200E+00 g/cm^3
+     Permittivity:
+        78.500000
+     Number of atoms:   5
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  O/h2o     0.00000000   -0.06556000    0.00000000    0.00000000    0.16000000    3.12000000
+       2  H/h2o     0.75695000    0.52032000    0.00000000    0.24100000    0.04600000    1.00000000
+       3  H/h2o    -0.75695000    0.52032000    0.00000000    0.24100000    0.04600000    1.00000000
+       4  L/h2o     0.00000000   -0.46971000    0.57154000   -0.24100000    0.04600000    1.80000000
+       5  L/h2o     0.00000000   -0.46971000   -0.57154000   -0.24100000    0.04600000    1.80000000
+
+
+     Molecule # 2 for K+ read from file:
+     ../../../pseudo/K+.Hagiwara.MOL
+     Density:
+         0.41560816E+00 cell^-1
+         0.89238937E-04 bohr^-3
+         0.10000000E+01 mol/L
+         0.39098300E-01 g/cm^3
+     Number of atoms:   1
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  K         0.00000000    0.00000000    0.00000000    1.00000000    0.00032800    4.93462800
+
+
+     Molecule # 3 for OH- read from file:
+     ../../../pseudo/OH-.oplsaa.MOL
+     Density:
+         0.41560816E+00 cell^-1
+         0.89238937E-04 bohr^-3
+         0.10000000E+01 mol/L
+         0.17007340E-01 g/cm^3
+     Number of atoms:   2
+     Atoms:
+       #  atom      X (angs)      Y (angs)      Z (angs)      Q (e)         E (kcal/mol)  S (angs)
+       1  O/oh      0.00000000    0.00000000    0.00000000   -1.30000000    0.25000000    3.20000000
+       2  H/oh      0.95300000    0.00000000    0.00000000    0.30000000    0.04600000    1.00000000
+
+
+     1D-RISM info
+     ------------
+     closure equation        =           KH
+     temperature             =     300.0000  kelvin
+     coulomb smearing radius =       2.0000  bohr
+     number of solvent sites =            8
+     number of grids         =         5973
+     maximum of R-space      =     999.8326  bohr
+     maximum of G-space      =      18.7632  bohr^-1
+     number of iterations    =        15000
+     convergence threshold   =      1.0E-08
+     Gaussian width of bonds =       0.3162  bohr
+     size of MDIIS           =           20
+     step of MDIIS           =       0.2000
+     number of processes     =           32
+
+
+     Correlation function is read from file
+
+
+     1D-RISM Calculation
+
+     iter. #     1  RMS(g-h-1)= 9.990E-09  nbox=  0  T=  300.00K
+
+     End of 1D-RISM calculation
+
+
+     convergence has been achieved in     1 iterations
+
+
+     Chemical potential of solvation
+
+     H2O        H2O        Closure      0.144018E+01 kcal/mol
+                           GaussFluct  -0.702227E+01 kcal/mol
+
+                K+         Closure     -0.280526E+00 kcal/mol
+                           GaussFluct  -0.350066E+00 kcal/mol
+
+                OH-        Closure     -0.749876E+00 kcal/mol
+                           GaussFluct  -0.841417E+00 kcal/mol
+
+                Total      Closure      0.409778E+00 kcal/mol
+                           GaussFluct  -0.821376E+01 kcal/mol
+
+     K+         H2O        Closure     -0.155711E+02 kcal/mol
+                           GaussFluct  -0.194311E+02 kcal/mol
+
+                K+         Closure      0.351545E+06 kcal/mol
+                           GaussFluct   0.351545E+06 kcal/mol
+
+                OH-        Closure     -0.351595E+06 kcal/mol
+                           GaussFluct  -0.351595E+06 kcal/mol
+
+                Total      Closure     -0.662661E+02 kcal/mol
+                           GaussFluct  -0.701841E+02 kcal/mol
+
+     OH-        H2O        Closure     -0.416233E+02 kcal/mol
+                           GaussFluct  -0.467044E+02 kcal/mol
+
+                K+         Closure     -0.351595E+06 kcal/mol
+                           GaussFluct  -0.351595E+06 kcal/mol
+
+                OH-        Closure      0.351544E+06 kcal/mol
+                           GaussFluct   0.351544E+06 kcal/mol
+
+                Total      Closure     -0.925525E+02 kcal/mol
+                           GaussFluct  -0.977562E+02 kcal/mol
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          65      32      9                14054     4956     765
+     Max          66      33     10                14087     4993     792
+     Sum        2083    1039    301               450233   159127   24819
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       9.7396  a.u.
+     unit-cell volume          =    4657.2513 (a.u.)^3
+     number of atoms/cell      =           12
+     number of atomic types    =            1
+     number of electrons       =       228.10
+     number of Kohn-Sham states=          137
+     kinetic-energy cutoff     =      40.0000  Ry
+     charge density cutoff     =     320.0000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.1000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA  PW   PBE  PBE
+                           (   1   4   3   4   0   0   0)
+
+     Effective Screening Medium Method
+     =================================
+     Boundary Conditions: Vacuum-Slab-Vacuum
+     total charge in unit cell        =  -0.1000
+     grid points for fit at edges     =        4 
+ 
+
+     celldm(1)=   9.739563  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.500000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   5.820773 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000 -0.577350  0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000  0.000000  0.171798 )  
+
+
+     PseudoPot. # 1 for Cu read from file:
+     ../../../pseudo/cu_pbe_v1.2.uspp.F.UPF
+     MD5 check sum: 6e991ff952a84172a2a52a1c1e996048
+     Pseudo is Ultrasoft + core correction, Zval = 19.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of  867 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with  8 coefficients,  rinner =    1.150   1.150   1.150
+                                                       1.150   1.150
+
+     atomic species   valence    mass     pseudopotential
+     Cu               19.00    63.54600     Cu( 1.00)
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Cu     tau(   1) = (   0.0000000   0.0000000  -0.4043952  )
+         2        Cu     tau(   2) = (   0.5000000   0.2886751   0.0038531  )
+         3        Cu     tau(   3) = (   0.2500000   0.1443376   0.4121014  )
+         4        Cu     tau(   4) = (   0.2500000   0.4330127  -0.4043952  )
+         5        Cu     tau(   5) = (   0.7500000   0.7216878   0.0038531  )
+         6        Cu     tau(   6) = (   0.5000000   0.5773503   0.4121014  )
+         7        Cu     tau(   7) = (   0.5000000   0.0000000  -0.4043952  )
+         8        Cu     tau(   8) = (   1.0000000   0.2886751   0.0038531  )
+         9        Cu     tau(   9) = (   0.7500000   0.1443376   0.4121014  )
+        10        Cu     tau(  10) = (   0.7500000   0.4330127  -0.4043952  )
+        11        Cu     tau(  11) = (   1.2500000   0.7216878   0.0038531  )
+        12        Cu     tau(  12) = (   1.0000000   0.5773503   0.4121014  )
+
+     number of k points=     8  Gaussian smearing, width (Ry)=  0.0100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.1250000   0.0721688   0.0000000), wk =   0.2500000
+        k(    2) = (   0.1250000   0.3608439   0.0000000), wk =   0.2500000
+        k(    3) = (   0.1250000  -0.5051815   0.0000000), wk =   0.2500000
+        k(    4) = (   0.1250000  -0.2165064   0.0000000), wk =   0.2500000
+        k(    5) = (   0.3750000  -0.0721688   0.0000000), wk =   0.2500000
+        k(    6) = (   0.3750000   0.2165064   0.0000000), wk =   0.2500000
+        k(    7) = (   0.3750000  -0.6495191   0.0000000), wk =   0.2500000
+        k(    8) = (   0.3750000  -0.3608439   0.0000000), wk =   0.2500000
+
+     Dense  grid:   450233 G-vectors     FFT dimensions: (  60,  60, 324)
+
+     Smooth grid:   159127 G-vectors     FFT dimensions: (  40,  40, 240)
+
+     Estimated max dynamical RAM per process >      71.06 MB
+
+     Estimated total dynamical RAM >       2.22 GB
+
+     Solute:
+       # atom     E (kcal/mol)  S (angs)
+       1  Cu      0.00500000    3.11369102    given
+       2  Cu      0.00500000    3.11369102    given
+       3  Cu      0.00500000    3.11369102    given
+       4  Cu      0.00500000    3.11369102    given
+       5  Cu      0.00500000    3.11369102    given
+       6  Cu      0.00500000    3.11369102    given
+       7  Cu      0.00500000    3.11369102    given
+       8  Cu      0.00500000    3.11369102    given
+       9  Cu      0.00500000    3.11369102    given
+      10  Cu      0.00500000    3.11369102    given
+      11  Cu      0.00500000    3.11369102    given
+      12  Cu      0.00500000    3.11369102    given
+
+     Wall:
+       Density =    0.01000000  bohr^-3
+       E       =    0.10000000  kcal/mol
+       S       =    4.00000000  angs
+
+
+     Laue-RISM info
+     --------------
+     closure equation        =           KH
+     temperature             =     300.0000  kelvin
+     coulomb smearing radius =       2.0000  bohr
+     number of solvent sites =            6
+     solvent sites           =    O/h2o   H/h2o   L/h2o       K
+     solvent sites           =     O/oh    H/oh
+     number of iterations    =        15000
+     convergence threshold   =      1.0E-06
+     convergence level       =       0.7000
+     size of MDIIS           =           20
+     step of MDIIS           =       0.1000
+     solvent cutoff          =     160.0000  Ry
+     Custom grid:   159127 G-vectors     FFT dimensions: (  40,  40, 240)
+
+     Boundary Conditions        : Vacuum-Slab-Solvent
+     unit-cell (in bohr)        : [ -28.345892  28.345892]
+     expand-cell (in bohr)      : [ -28.345892  89.761991]
+     solvent of right (in bohr) : [   0.000000  89.761991]
+     buffer  of right (in bohr) : [  -4.015668   0.000000]
+     repulsive wall (in bohr)   : [  -Infinity  -2.286274]
+     reference of potential     : right-hand side
+     #grids to fit at edges of unit-cell =    4
+     Laue grid:     1039 Gxy-vectors     FFT dimensions: (  40,  40, 500)
+
+
+     The initial density is read from file :
+     ./output/opt.save/charge-density
+
+
+     Correlation function is read from file
+
+
+     negative rho (up, down):  1.566E-03 0.000E+00
+
+     Laue-RISM Calculation
+
+     convergence threshold    = 1.585E-05
+     iter. #     1  RMS(g-h-1)= 9.900E-07  nbox=  0
+
+     End of Laue-RISM calculation
+
+
+     convergence has been achieved in     1 iterations
+
+
+     solvent charge    0.09999, renormalised to    0.10000
+
+     Total number of solvent (in expand-cell)
+     H2O           32.548988
+     K+             0.742275
+     OH-            0.642248
+
+     Total charge of solvent (in expand-cell)
+     H2O            0.000004 e
+     K+             0.742275 e
+     OH-           -0.642289 e
+     Total          0.099989 e
+
+     Chemical potential of solvation (in expand-cell)
+     H2O        GaussFluct   0.545693E+01 kcal/mol
+     K+         GaussFluct   0.122579E+03 kcal/mol
+     OH-        GaussFluct  -0.122478E+03 kcal/mol
+     Total      GaussFluct   0.555860E+01 kcal/mol
+
+     Starting wfcs are  156 randomized atomic wfcs
+
+     total cpu time spent up to now is      109.9 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    40.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  3 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  4 eigenvalues not converged
+     c_bands:  3 eigenvalues not converged
+     c_bands:  5 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  1.00E-05,  avg # of iterations = 92.5
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  2.24E-08,  avg # of iterations = 16.8
+
+     negative rho (up, down):  1.566E-03 0.000E+00
+
+     Laue-RISM Calculation
+
+     convergence threshold    = 1.000E-06
+     iter. #     1  RMS(g-h-1)= 1.083E-04  nbox=  0
+     iter. #    11  RMS(g-h-1)= 2.905E-05  nbox=  6
+     iter. #    21  RMS(g-h-1)= 1.601E-05  nbox= 16
+     iter. #    31  RMS(g-h-1)= 1.279E-05  nbox= 20
+     iter. #    41  RMS(g-h-1)= 1.086E-05  nbox= 20
+     iter. #    51  RMS(g-h-1)= 9.938E-06  nbox=  3
+     iter. #    61  RMS(g-h-1)= 8.128E-06  nbox= 13
+     iter. #    71  RMS(g-h-1)= 6.070E-06  nbox=  7
+     iter. #    81  RMS(g-h-1)= 4.619E-06  nbox= 17
+     iter. #    91  RMS(g-h-1)= 4.074E-06  nbox= 11
+     iter. #   101  RMS(g-h-1)= 3.693E-06  nbox=  5
+     iter. #   111  RMS(g-h-1)= 2.987E-06  nbox= 15
+     iter. #   121  RMS(g-h-1)= 2.661E-06  nbox=  9
+     iter. #   131  RMS(g-h-1)= 2.575E-06  nbox=  3
+     iter. #   141  RMS(g-h-1)= 2.409E-06  nbox= 13
+     iter. #   151  RMS(g-h-1)= 2.323E-06  nbox=  7
+     iter. #   161  RMS(g-h-1)= 2.295E-06  nbox= 17
+     iter. #   171  RMS(g-h-1)= 2.254E-06  nbox= 11
+     iter. #   181  RMS(g-h-1)= 2.193E-06  nbox=  5
+     iter. #   191  RMS(g-h-1)= 2.167E-06  nbox= 15
+     iter. #   201  RMS(g-h-1)= 2.141E-06  nbox=  9
+     iter. #   211  RMS(g-h-1)= 2.003E-06  nbox= 19
+     iter. #   221  RMS(g-h-1)= 1.589E-06  nbox= 11
+     iter. #   231  RMS(g-h-1)= 1.058E-06  nbox= 20
+     iter. #   234  RMS(g-h-1)= 9.918E-07  nbox= 20
+
+     End of Laue-RISM calculation
+
+
+     convergence has been achieved in   234 iterations
+
+
+     solvent charge    0.09987, renormalised to    0.10000
+
+     Total number of solvent (in expand-cell)
+     H2O           32.549214
+     K+             0.742126
+     OH-            0.642210
+
+     Total charge of solvent (in expand-cell)
+     H2O           -0.000008 e
+     K+             0.742126 e
+     OH-           -0.642249 e
+     Total          0.099868 e
+
+     Chemical potential of solvation (in expand-cell)
+     H2O        GaussFluct   0.545733E+01 kcal/mol
+     K+         GaussFluct   0.122790E+03 kcal/mol
+     OH-        GaussFluct  -0.122664E+03 kcal/mol
+     Total      GaussFluct   0.558408E+01 kcal/mol
+
+
+     total cpu time spent up to now is      166.1 secs
+
+     total energy              =   -4845.11653893 Ry
+     estimated scf accuracy    <       0.00005293 Ry
+
+     iteration #  2     ecut=    40.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  2 eigenvalues not converged
+     c_bands:  2 eigenvalues not converged
+     ethr =  2.32E-08,  avg # of iterations =  8.4
+
+     negative rho (up, down):  1.565E-03 0.000E+00
+
+     Laue-RISM Calculation
+
+     convergence threshold    = 1.000E-06
+     iter. #     1  RMS(g-h-1)= 6.979E-05  nbox=  0
+     iter. #    11  RMS(g-h-1)= 1.469E-05  nbox= 10
+     iter. #    21  RMS(g-h-1)= 8.802E-06  nbox= 20
+     iter. #    31  RMS(g-h-1)= 7.739E-06  nbox= 20
+     iter. #    41  RMS(g-h-1)= 6.292E-06  nbox= 20
+     iter. #    51  RMS(g-h-1)= 5.338E-06  nbox= 20
+     iter. #    61  RMS(g-h-1)= 4.508E-06  nbox= 20
+     iter. #    71  RMS(g-h-1)= 3.601E-06  nbox= 20
+     iter. #    81  RMS(g-h-1)= 3.435E-06  nbox= 20
+     iter. #    91  RMS(g-h-1)= 3.053E-06  nbox=  6
+     iter. #   101  RMS(g-h-1)= 2.833E-06  nbox= 16
+     iter. #   111  RMS(g-h-1)= 2.526E-06  nbox= 10
+     iter. #   121  RMS(g-h-1)= 2.168E-06  nbox=  4
+     iter. #   131  RMS(g-h-1)= 1.981E-06  nbox= 14
+     iter. #   141  RMS(g-h-1)= 1.851E-06  nbox=  8
+     iter. #   151  RMS(g-h-1)= 1.815E-06  nbox=  2
+     iter. #   161  RMS(g-h-1)= 1.692E-06  nbox= 12
+     iter. #   171  RMS(g-h-1)= 1.626E-06  nbox=  6
+     iter. #   181  RMS(g-h-1)= 1.548E-06  nbox= 16
+     iter. #   191  RMS(g-h-1)= 1.362E-06  nbox= 10
+     iter. #   201  RMS(g-h-1)= 1.219E-06  nbox=  4
+     iter. #   211  RMS(g-h-1)= 1.110E-06  nbox= 14
+     iter. #   221  RMS(g-h-1)= 1.035E-06  nbox=  8
+     iter. #   227  RMS(g-h-1)= 9.893E-07  nbox= 14
+
+     End of Laue-RISM calculation
+
+
+     convergence has been achieved in   227 iterations
+
+
+     solvent charge    0.10005, renormalised to    0.10000
+
+     Total number of solvent (in expand-cell)
+     H2O           32.548851
+     K+             0.742322
+     OH-            0.642248
+
+     Total charge of solvent (in expand-cell)
+     H2O            0.000013 e
+     K+             0.742322 e
+     OH-           -0.642290 e
+     Total          0.100046 e
+
+     Chemical potential of solvation (in expand-cell)
+     H2O        GaussFluct   0.545604E+01 kcal/mol
+     K+         GaussFluct   0.122647E+03 kcal/mol
+     OH-        GaussFluct  -0.122540E+03 kcal/mol
+     Total      GaussFluct   0.556317E+01 kcal/mol
+
+
+     total cpu time spent up to now is      181.7 secs
+
+     total energy              =   -4845.11664988 Ry
+     estimated scf accuracy    <       0.00015007 Ry
+
+     iteration #  3     ecut=    40.00 Ry     beta= 0.10
+     RMM-DIIS diagonalization
+     ethr =  2.32E-08,  avg # of iterations =  3.0
+
+     negative rho (up, down):  1.566E-03 0.000E+00
+
+     Laue-RISM Calculation
+
+     convergence threshold    = 1.000E-06
+     iter. #     1  RMS(g-h-1)= 1.068E-04  nbox=  0
+     iter. #    11  RMS(g-h-1)= 2.639E-05  nbox= 10
+     iter. #    21  RMS(g-h-1)= 1.197E-05  nbox= 20
+     iter. #    31  RMS(g-h-1)= 9.688E-06  nbox= 20
+     iter. #    41  RMS(g-h-1)= 8.867E-06  nbox=  4
+     iter. #    51  RMS(g-h-1)= 6.899E-06  nbox=  9
+     iter. #    61  RMS(g-h-1)= 4.290E-06  nbox= 19
+     iter. #    71  RMS(g-h-1)= 3.566E-06  nbox= 20
+     iter. #    81  RMS(g-h-1)= 2.864E-06  nbox= 20
+     iter. #    91  RMS(g-h-1)= 2.547E-06  nbox= 20
+     iter. #   101  RMS(g-h-1)= 2.361E-06  nbox=  7
+     iter. #   111  RMS(g-h-1)= 2.107E-06  nbox= 17
+     iter. #   121  RMS(g-h-1)= 1.888E-06  nbox= 11
+     iter. #   131  RMS(g-h-1)= 1.754E-06  nbox=  5
+     iter. #   141  RMS(g-h-1)= 1.547E-06  nbox= 15
+     iter. #   151  RMS(g-h-1)= 1.415E-06  nbox=  9
+     iter. #   161  RMS(g-h-1)= 1.322E-06  nbox=  3
+     iter. #   171  RMS(g-h-1)= 1.256E-06  nbox= 13
+     iter. #   181  RMS(g-h-1)= 1.213E-06  nbox=  7
+     iter. #   191  RMS(g-h-1)= 1.152E-06  nbox= 17
+     iter. #   201  RMS(g-h-1)= 1.054E-06  nbox= 11
+     iter. #   205  RMS(g-h-1)= 9.948E-07  nbox= 15
+
+     End of Laue-RISM calculation
+
+
+     convergence has been achieved in   205 iterations
+
+
+     solvent charge    0.10012, renormalised to    0.10000
+
+     Total number of solvent (in expand-cell)
+     H2O           32.548906
+     K+             0.742359
+     OH-            0.642298
+
+     Total charge of solvent (in expand-cell)
+     H2O            0.000019 e
+     K+             0.742359 e
+     OH-           -0.642258 e
+     Total          0.100120 e
+
+     Chemical potential of solvation (in expand-cell)
+     H2O        GaussFluct   0.545619E+01 kcal/mol
+     K+         GaussFluct   0.122654E+03 kcal/mol
+     OH-        GaussFluct  -0.122548E+03 kcal/mol
+     Total      GaussFluct   0.556243E+01 kcal/mol
+
+
+     total cpu time spent up to now is      195.1 secs
+
+     End of self-consistent calculation
+
+          k = 0.1250 0.0722 0.0000 ( 19861 PWs)   bands (ev):
+
+  -116.9977-116.9900-116.9897-116.9897-116.7258-116.7188-116.7182-116.7179
+  -116.7179-116.7112-116.7109-116.7109 -74.4284 -74.4284 -74.4217 -74.3927
+   -74.3827 -74.3824 -74.3824 -74.3741 -74.3709 -74.3709 -74.3564 -74.3516
+   -74.1752 -74.1752 -74.1692 -74.1692 -74.1632 -74.1574 -74.1235 -74.1176
+   -74.1151 -74.1151 -74.1094 -74.1094 -74.1061 -74.1002 -74.0949 -74.0893
+   -74.0820 -74.0747 -74.0744 -74.0744 -74.0735 -74.0669 -74.0667 -74.0666
+   -12.9043 -10.9676  -9.4843  -9.2261  -9.0859  -9.0859  -8.9017  -8.8585
+    -8.8585  -8.5308  -8.4905  -8.4905  -8.3943  -8.3943  -8.3942  -7.8190
+    -7.8190  -7.8084  -7.4642  -7.4609  -7.4551  -7.4551  -7.4198  -7.3549
+    -7.3383  -7.2341  -7.2341  -7.1612  -7.1503  -7.1356  -7.0660  -7.0199
+    -7.0026  -6.9835  -6.9835  -6.6113  -6.6113  -6.5858  -6.5788  -6.5706
+    -6.5025  -6.5015  -6.5014  -6.4502  -6.2652  -6.2049  -6.1766  -6.1766
+    -6.1492  -6.1201  -6.1052  -6.1052  -6.0825  -6.0825  -6.0619  -6.0547
+    -5.9503  -5.9503  -5.8710  -5.8710  -5.8541  -5.8418  -5.7810  -5.2436
+    -4.5017  -4.5017  -4.3626  -4.1850  -3.4758  -3.4758  -2.4861  -2.4861
+    -2.2551  -0.5721  -0.0903  -0.0400   0.0419   0.0419   0.0967   0.5579
+     0.8272   0.8331   0.8331   1.0262   1.8224   2.0798   2.1650   2.1650
+     2.1767
+
+          k = 0.1250 0.3608 0.0000 ( 19876 PWs)   bands (ev):
+
+  -116.9959-116.9914-116.9905-116.9892-116.7241-116.7196-116.7187-116.7174
+  -116.7171-116.7126-116.7117-116.7104 -74.4214 -74.4135 -74.4121 -74.3904
+   -74.3846 -74.3840 -74.3834 -74.3816 -74.3778 -74.3712 -74.3662 -74.3567
+   -74.1681 -74.1622 -74.1610 -74.1550 -74.1542 -74.1485 -74.1280 -74.1268
+   -74.1223 -74.1210 -74.1190 -74.1131 -74.1100 -74.1044 -74.1014 -74.0958
+   -74.0802 -74.0759 -74.0751 -74.0739 -74.0721 -74.0682 -74.0674 -74.0662
+   -12.1880 -10.3122  -9.8950  -9.3783  -8.9820  -8.9511  -8.7787  -8.7052
+    -8.5843  -8.4263  -8.3684  -8.3051  -8.1418  -8.1078  -8.0958  -7.8132
+    -7.7995  -7.7916  -7.7167  -7.5876  -7.5619  -7.5007  -7.4540  -7.4444
+    -7.3248  -7.2916  -7.2329  -7.2125  -7.1630  -7.1513  -7.1140  -7.1104
+    -7.0985  -7.0146  -6.8922  -6.8724  -6.8707  -6.7867  -6.7849  -6.7519
+    -6.7347  -6.7129  -6.7073  -6.6296  -6.5716  -6.5523  -6.5334  -6.4484
+    -6.4301  -6.4219  -6.3542  -6.2672  -6.2654  -6.2096  -6.2069  -6.1084
+    -6.1078  -6.0746  -6.0722  -6.0562  -6.0005  -5.9968  -5.9261  -5.4610
+    -5.3751  -5.0560  -4.5831  -3.3596  -3.1287  -2.9822  -2.2581  -2.1689
+    -1.4646   0.0782   0.1365   0.5237   0.6153   0.6573   0.9926   1.2722
+     1.3417   1.4967   1.7106   2.2762   2.5319   2.7330   2.8077   2.8752
+     3.1690
+
+          k = 0.1250-0.5052 0.0000 ( 19917 PWs)   bands (ev):
+
+  -116.9945-116.9929-116.9906-116.9891-116.7226-116.7210-116.7188-116.7173
+  -116.7156-116.7140-116.7118-116.7103 -74.4122 -74.4103 -74.3991 -74.3946
+   -74.3885 -74.3868 -74.3864 -74.3835 -74.3814 -74.3782 -74.3638 -74.3579
+   -74.1557 -74.1556 -74.1499 -74.1498 -74.1461 -74.1419 -74.1402 -74.1361
+   -74.1354 -74.1295 -74.1240 -74.1183 -74.1085 -74.1029 -74.1015 -74.0958
+   -74.0788 -74.0773 -74.0752 -74.0738 -74.0709 -74.0695 -74.0675 -74.0661
+   -11.5121 -10.6998  -9.7519  -9.3998  -9.2311  -8.6881  -8.6127  -8.5215
+    -8.4438  -8.4047  -8.2183  -8.2083  -8.0428  -8.0073  -7.9759  -7.8551
+    -7.8273  -7.8131  -7.7422  -7.7371  -7.6320  -7.6200  -7.4543  -7.4484
+    -7.3439  -7.3164  -7.2512  -7.2308  -7.2161  -7.2054  -7.1997  -7.1638
+    -7.1501  -7.0852  -7.0592  -7.0170  -7.0156  -6.9978  -6.9459  -6.9276
+    -6.8748  -6.7120  -6.7107  -6.6574  -6.5934  -6.5873  -6.5679  -6.5296
+    -6.5092  -6.4625  -6.3745  -6.3486  -6.3424  -6.2682  -6.2661  -6.2158
+    -6.1730  -6.1064  -6.0734  -6.0650  -6.0596  -6.0025  -5.9989  -5.9500
+    -5.3292  -4.5690  -4.5217  -3.8408  -3.3494  -2.2108  -2.1841  -2.0212
+    -1.0838  -0.2227   0.7255   0.8960   0.9276   1.3169   1.3616   1.5791
+     1.9452   1.9847   2.1712   2.2429   2.2470   2.3042   2.9260   2.9333
+     3.0810
+
+          k = 0.1250-0.2165 0.0000 ( 19876 PWs)   bands (ev):
+
+  -116.9971-116.9903-116.9903-116.9894-116.7252-116.7185-116.7185-116.7182
+  -116.7176-116.7115-116.7115-116.7106 -74.4226 -74.4226 -74.4210 -74.3919
+   -74.3832 -74.3832 -74.3819 -74.3818 -74.3698 -74.3698 -74.3641 -74.3509
+   -74.1692 -74.1692 -74.1633 -74.1633 -74.1626 -74.1568 -74.1310 -74.1251
+   -74.1143 -74.1143 -74.1136 -74.1086 -74.1086 -74.1077 -74.0943 -74.0886
+   -74.0813 -74.0750 -74.0749 -74.0741 -74.0730 -74.0672 -74.0672 -74.0664
+   -12.6617 -10.7410  -9.3240  -9.3240  -9.3045  -8.9067  -8.8705  -8.8705
+    -8.7436  -8.4839  -8.4839  -8.4127  -8.2892  -8.2892  -8.2750  -7.8130
+    -7.8045  -7.8045  -7.5705  -7.4272  -7.4243  -7.4243  -7.4227  -7.4109
+    -7.3896  -7.2574  -7.2439  -7.2439  -7.1512  -7.1116  -7.0731  -7.0589
+    -7.0589  -7.0289  -6.9185  -6.7324  -6.7012  -6.7012  -6.6848  -6.5954
+    -6.5504  -6.5203  -6.5203  -6.5066  -6.4172  -6.3756  -6.3239  -6.3239
+    -6.2358  -6.2357  -6.2141  -6.1997  -6.1448  -6.1448  -6.1207  -6.0828
+    -6.0653  -5.9985  -5.9985  -5.9656  -5.9656  -5.9524  -5.4847  -5.4343
+    -5.4343  -4.5331  -4.5331  -3.8878  -3.6456  -2.8307  -2.3037  -2.1410
+    -2.1410  -0.3549   0.0293   0.1454   0.1915   0.5092   0.5092   0.7961
+     1.0496   1.2689   1.4020   1.4020   2.0520   2.0585   2.2738   2.2738
+     2.2964
+
+          k = 0.3750-0.0722 0.0000 ( 19876 PWs)   bands (ev):
+
+  -116.9959-116.9914-116.9905-116.9892-116.7241-116.7196-116.7187-116.7174
+  -116.7171-116.7126-116.7117-116.7104 -74.4214 -74.4135 -74.4121 -74.3904
+   -74.3846 -74.3840 -74.3834 -74.3816 -74.3778 -74.3712 -74.3662 -74.3567
+   -74.1681 -74.1622 -74.1610 -74.1550 -74.1542 -74.1485 -74.1280 -74.1268
+   -74.1223 -74.1210 -74.1190 -74.1131 -74.1100 -74.1044 -74.1014 -74.0958
+   -74.0802 -74.0759 -74.0751 -74.0739 -74.0721 -74.0682 -74.0674 -74.0662
+   -12.1880 -10.3122  -9.8950  -9.3783  -8.9820  -8.9511  -8.7787  -8.7052
+    -8.5843  -8.4263  -8.3684  -8.3051  -8.1418  -8.1078  -8.0958  -7.8132
+    -7.7995  -7.7916  -7.7167  -7.5876  -7.5619  -7.5007  -7.4540  -7.4444
+    -7.3248  -7.2916  -7.2329  -7.2125  -7.1630  -7.1513  -7.1140  -7.1104
+    -7.0985  -7.0146  -6.8922  -6.8724  -6.8707  -6.7867  -6.7849  -6.7519
+    -6.7347  -6.7129  -6.7073  -6.6296  -6.5716  -6.5523  -6.5334  -6.4484
+    -6.4301  -6.4219  -6.3542  -6.2672  -6.2654  -6.2096  -6.2069  -6.1084
+    -6.1078  -6.0746  -6.0722  -6.0562  -6.0005  -5.9968  -5.9261  -5.4610
+    -5.3751  -5.0560  -4.5831  -3.3596  -3.1287  -2.9822  -2.2581  -2.1689
+    -1.4646   0.0782   0.1365   0.5237   0.6153   0.6573   0.9926   1.2723
+     1.3417   1.4966   1.7106   2.2761   2.5319   2.7340   2.8077   2.8754
+     3.1691
+
+          k = 0.3750 0.2165 0.0000 ( 19929 PWs)   bands (ev):
+
+  -116.9954-116.9923-116.9897-116.9897-116.7235-116.7204-116.7179-116.7179
+  -116.7166-116.7134-116.7109-116.7109 -74.4197 -74.4197 -74.4013 -74.3897
+   -74.3856 -74.3824 -74.3823 -74.3797 -74.3797 -74.3722 -74.3689 -74.3616
+   -74.1676 -74.1675 -74.1616 -74.1615 -74.1433 -74.1376 -74.1228 -74.1228
+   -74.1184 -74.1172 -74.1172 -74.1150 -74.1125 -74.1112 -74.1094 -74.1053
+   -74.0797 -74.0767 -74.0744 -74.0743 -74.0717 -74.0690 -74.0667 -74.0667
+   -11.9586 -10.3579 -10.1163  -9.1100  -8.8966  -8.8966  -8.8525  -8.6130
+    -8.6130  -8.4511  -8.2893  -8.2893  -8.0964  -8.0407  -8.0407  -7.7801
+    -7.7801  -7.7750  -7.7724  -7.6385  -7.6331  -7.6331  -7.4443  -7.4224
+    -7.2648  -7.2648  -7.2506  -7.1809  -7.1809  -7.1720  -7.1069  -7.0738
+    -7.0632  -6.9775  -6.9720  -6.9611  -6.9611  -6.8857  -6.8808  -6.8808
+    -6.8409  -6.7222  -6.6929  -6.6250  -6.6250  -6.6079  -6.5494  -6.4688
+    -6.4510  -6.4510  -6.3294  -6.3069  -6.2995  -6.2995  -6.2899  -6.2259
+    -6.2036  -6.0711  -6.0711  -6.0501  -6.0302  -5.9633  -5.9633  -5.9015
+    -4.8755  -4.5217  -4.5217  -3.5264  -3.4184  -3.4184  -2.7977  -1.1354
+    -1.1354  -0.5850   0.2938   0.8494   0.8915   0.9877   0.9878   1.5099
+     1.7211   1.9736   2.1060   2.1061   2.6987   2.7684   2.7754   2.8779
+     2.8779
+
+          k = 0.3750-0.6495 0.0000 ( 19872 PWs)   bands (ev):
+
+  -116.9932-116.9932-116.9919-116.9887-116.7214-116.7214-116.7200-116.7169
+  -116.7144-116.7144-116.7131-116.7099 -74.4134 -74.4061 -74.3973 -74.3910
+   -74.3910 -74.3868 -74.3868 -74.3851 -74.3810 -74.3682 -74.3680 -74.3680
+   -74.1618 -74.1559 -74.1546 -74.1486 -74.1395 -74.1351 -74.1350 -74.1339
+   -74.1293 -74.1293 -74.1157 -74.1157 -74.1112 -74.1099 -74.1099 -74.1056
+   -74.0776 -74.0776 -74.0763 -74.0735 -74.0698 -74.0698 -74.0686 -74.0658
+   -10.8801 -10.8801 -10.1302  -9.2972  -9.2972  -8.9006  -8.3279  -8.3279
+    -8.3030  -8.3022  -8.1312  -8.1251  -8.0933  -8.0784  -7.9587  -7.9437
+    -7.9437  -7.7951  -7.7951  -7.7051  -7.5448  -7.5248  -7.5139  -7.5139
+    -7.4890  -7.4265  -7.4176  -7.4176  -7.3524  -7.3524  -7.1999  -7.1442
+    -7.1322  -7.1244  -7.0541  -7.0422  -7.0422  -7.0293  -6.9491  -6.9491
+    -6.7758  -6.7758  -6.6654  -6.6307  -6.5661  -6.5620  -6.5620  -6.5357
+    -6.4660  -6.4660  -6.3989  -6.2571  -6.2571  -6.2038  -6.1960  -6.1960
+    -6.1533  -6.1224  -6.1143  -6.1143  -6.0936  -6.0911  -5.9346  -5.9346
+    -5.8461  -5.4219  -3.9790  -3.9790  -3.2149  -1.8886  -1.3370  -1.3369
+    -0.5699  -0.2965  -0.0719  -0.0340   1.3746   1.3747   1.6438   1.7789
+     2.0177   2.0181   2.0695   2.0699   2.2370   2.7017   2.7076   2.7480
+     2.9153
+
+          k = 0.3750-0.3608 0.0000 ( 19917 PWs)   bands (ev):
+
+  -116.9945-116.9929-116.9906-116.9891-116.7226-116.7210-116.7188-116.7173
+  -116.7156-116.7140-116.7118-116.7103 -74.4122 -74.4103 -74.3991 -74.3946
+   -74.3885 -74.3868 -74.3864 -74.3835 -74.3814 -74.3782 -74.3638 -74.3579
+   -74.1557 -74.1556 -74.1499 -74.1498 -74.1461 -74.1419 -74.1402 -74.1361
+   -74.1354 -74.1295 -74.1240 -74.1183 -74.1085 -74.1029 -74.1015 -74.0958
+   -74.0788 -74.0773 -74.0752 -74.0738 -74.0709 -74.0695 -74.0675 -74.0661
+   -11.5121 -10.6998  -9.7519  -9.3998  -9.2311  -8.6881  -8.6127  -8.5215
+    -8.4438  -8.4047  -8.2183  -8.2083  -8.0428  -8.0073  -7.9759  -7.8551
+    -7.8273  -7.8131  -7.7422  -7.7371  -7.6320  -7.6200  -7.4543  -7.4484
+    -7.3439  -7.3164  -7.2512  -7.2308  -7.2161  -7.2054  -7.1997  -7.1638
+    -7.1501  -7.0852  -7.0592  -7.0170  -7.0156  -6.9978  -6.9459  -6.9276
+    -6.8748  -6.7120  -6.7107  -6.6574  -6.5934  -6.5873  -6.5679  -6.5296
+    -6.5092  -6.4625  -6.3745  -6.3486  -6.3424  -6.2682  -6.2661  -6.2158
+    -6.1730  -6.1064  -6.0734  -6.0650  -6.0596  -6.0025  -5.9989  -5.9500
+    -5.3292  -4.5690  -4.5217  -3.8408  -3.3494  -2.2108  -2.1841  -2.0212
+    -1.0838  -0.2227   0.7255   0.8960   0.9276   1.3168   1.3616   1.5791
+     1.9452   1.9847   2.1711   2.2429   2.2470   2.3043   2.9260   2.9297
+     3.0722
+
+     the Fermi energy is    -4.5307 ev
+
+!    total energy              =   -4845.11668379 Ry
+     estimated scf accuracy    <       0.00000085 Ry
+     smearing contrib. (-TS)   =      -0.00824093 Ry
+     internal energy E=F+TS    =   -4845.10844286 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =   26953.96460914 Ry
+     hartree contribution      =  -13523.85216296 Ry
+     xc contribution           =    -465.28796712 Ry
+     ewald contribution        =  -17809.95104590 Ry
+     solvation energy (RISM)   =       0.01774047 Ry
+     level-shifting contrib.   =       0.00038352 Ry
+
+     convergence has been achieved in   3 iterations
+
+     negative rho (up, down):  1.566E-03 0.000E+00
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00015152    0.00013076    0.00531746
+     atom    2 type  1   force =     0.00020366    0.00009970    0.00122011
+     atom    3 type  1   force =    -0.00022398   -0.00010186   -0.00760381
+     atom    4 type  1   force =     0.00007300    0.00023333    0.00531205
+     atom    5 type  1   force =     0.00002955   -0.00022551    0.00115760
+     atom    6 type  1   force =    -0.00016540   -0.00016268   -0.00771033
+     atom    7 type  1   force =     0.00026687   -0.00003137    0.00530925
+     atom    8 type  1   force =    -0.00019099    0.00013828    0.00116110
+     atom    9 type  1   force =    -0.00020843   -0.00004163   -0.00771408
+     atom   10 type  1   force =     0.00035653    0.00015018    0.00541079
+     atom   11 type  1   force =    -0.00002779   -0.00000753    0.00112571
+     atom   12 type  1   force =    -0.00026453   -0.00018165   -0.00770610
+
+     Total force =     0.015376     Total SCF correction =     0.004559
+     SCF correction compared to forces is large: reduce conv_thr to get better values
+
+     Writing all to output data dir ./output/opt.save/ :
+     XML data file, charge density, RISM restart, pseudopotentials, RISM molfiles, collected wavefunctions
+ 
+     init_run     :      2.94s CPU      3.25s WALL (       1 calls)
+     electrons    :     84.37s CPU     85.28s WALL (       1 calls)
+     forces       :      0.95s CPU      0.98s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.64s CPU      0.66s WALL (       1 calls)
+     potinit      :      2.05s CPU      2.29s WALL (       1 calls)
+     hinit0       :      0.13s CPU      0.15s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     45.91s CPU     46.26s WALL (       4 calls)
+     sum_band     :      0.96s CPU      1.09s WALL (       4 calls)
+     v_of_rho     :      0.08s CPU      0.10s WALL (       4 calls)
+     newd         :      0.16s CPU      0.25s WALL (       4 calls)
+     mix_rho      :      0.01s CPU      0.01s WALL (       4 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.09s CPU      0.10s WALL (      80 calls)
+     crmmdiagg    :      0.69s CPU      0.70s WALL (       8 calls)
+     wfcrot       :      1.08s CPU      1.10s WALL (      16 calls)
+
+     Called by *rmmdiagg:
+     h_psi        :     14.64s CPU     14.84s WALL (    1042 calls)
+     s_psi        :      1.17s CPU      1.19s WALL (    1042 calls)
+     g_psi        :      0.07s CPU      0.08s WALL (     941 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      1.79s CPU      1.81s WALL (    1042 calls)
+     vloc_psi     :     11.47s CPU     11.63s WALL (    1042 calls)
+     add_vuspsi   :      1.25s CPU      1.26s WALL (    1042 calls)
+
+     General routines
+     calbec       :      2.05s CPU      2.08s WALL (    1106 calls)
+     fft          :      0.13s CPU      0.17s WALL (      75 calls)
+     ffts         :      0.00s CPU      0.00s WALL (       8 calls)
+     fftw         :      9.78s CPU      9.91s WALL (   99164 calls)
+     interpolate  :      0.00s CPU      0.01s WALL (       4 calls)
+ 
+     Parallel routines
+     fft_scatt_xy :      0.18s CPU      0.18s WALL (    8042 calls)
+     fft_scatt_yz :      1.10s CPU      1.10s WALL (    8042 calls)
+
+     RISM routines
+     1DRISM_pre   :    105.88s CPU    106.06s WALL (       1 calls)
+     1DRISM_run   :      0.03s CPU      0.04s WALL (       1 calls)
+     3DRISM_pre   :      1.71s CPU      1.89s WALL (       1 calls)
+     3DRISM_run   :     37.59s CPU     37.95s WALL (       4 calls)
+     3DRISM_for   :      0.55s CPU      0.55s WALL (       1 calls)
+     3DRISM_vsol  :      0.00s CPU      0.01s WALL (       4 calls)
+ 
+     PWSCF        :   3m15.21s CPU   3m17.31s WALL
+
+ 
+   This run was terminated on:  15:56:19   9Jun2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

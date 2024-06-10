@@ -8,10 +8,14 @@ NPROCS=16
 
 cd $PBS_O_WORKDIR
 module purge
-module load intel23-intelmpi  
-module load fftw-3.3.9
-module load hdf5-1.12.0
-export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
+#module load intel23-intelmpi
+#module load fftw-3.3.9
+#module load hdf5-1.12.0
+#export PATH=/home/software/espresso/qe-7.2-intel23-intelmpi/bin/:$PATH
+
+
+module load g16-a03
+export PATH=/beegfs/coldpool/mano/qe/q-e/bin/:$PATH
 
 #--------------------------------------------------------------------------------------
 

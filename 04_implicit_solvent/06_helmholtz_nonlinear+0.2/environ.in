@@ -1,0 +1,32 @@
+&ENVIRON
+   verbose = 2
+   environ_thr = 1.d2
+   environ_type = 'input'
+   env_static_permittivity = 80
+   env_surface_tension = 0.D0
+   env_pressure = 0.D0
+   env_electrolyte_ntyp = 2
+   zion(1) = 1
+   zion(2) = -1
+   cion(1) = 1.0
+   cion(2) = 1.0
+   cionmax = 10
+   temperature = 300
+   system_dim = 2
+   system_axis = 3
+   system_ntyp = 1
+   electrolyte_linearized = .false.
+/
+&BOUNDARY
+   solvent_mode = 'full'
+   electrolyte_mode = 'system'
+   electrolyte_distance = 30.0
+   electrolyte_spread = 0.01
+/
+&ELECTROSTATIC
+   pbc_correction = 'parabolic'
+   pbc_dim = 2
+   pbc_axis = 3
+   tol = 5.D-13
+   inner_tol = 5.D-18
+/

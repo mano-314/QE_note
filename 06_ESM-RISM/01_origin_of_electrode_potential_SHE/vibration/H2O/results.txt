@@ -1,0 +1,57 @@
+atomic species found :  ['O', 'H']
+creating input
+   RISM  yes
+   FCP   no
+performing relax mode
+atomic species found :  ['O', 'H']
+creating input
+   RISM  yes
+   FCP   no
+performing vibration mode
+calculate vibration for atoms index  :  [0, 1, 2]
+calculate vibration for atoms symbol :  ['O' 'H' 'H']
+---------------------
+  #    meV     cm^-1
+---------------------
+  0    3.8i     30.5i
+  1    2.5i     20.3i
+  2    0.7i      5.4i
+  3    0.5       4.1
+  4    2.3      18.5
+  5    2.9      23.7
+  6  187.5    1512.5
+  7  460.1    3710.6
+  8  469.1    3783.2
+---------------------
+Zero-point energy: 0.561 eV
+Enthalpy components at T = 298.15 K:
+===============================
+E_pot                  0.000 eV
+E_ZPE                  0.558 eV
+Cv_trans (0->T)        0.039 eV
+Cv_rot (0->T)          0.039 eV
+Cv_vib (0->T)          0.000 eV
+(C_v -> C_p)           0.026 eV
+-------------------------------
+H                      0.661 eV
+===============================
+
+Entropy components at T = 298.15 K and P = 101325.0 Pa:
+=================================================
+                           S               T*S
+S_trans (1 bar)    0.0015019 eV/K        0.448 eV
+S_rot              0.0004610 eV/K        0.137 eV
+S_elec             0.0000000 eV/K        0.000 eV
+S_vib              0.0000005 eV/K        0.000 eV
+S (1 bar -> P)    -0.0000011 eV/K       -0.000 eV
+-------------------------------------------------
+S                  0.0019623 eV/K        0.585 eV
+=================================================
+
+Free energy components at T = 298.15 K and P = 101325.0 Pa:
+=======================
+    H          0.661 eV
+ -T*S         -0.585 eV
+-----------------------
+    G          0.076 eV
+=======================

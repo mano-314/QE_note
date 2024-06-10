@@ -1,0 +1,44 @@
+&CONTROL
+ calculation        = 'scf'
+ outdir             = 'output'
+ pseudo_dir         = '../../pseudo'
+ prefix             = 'opt'
+/
+&SYSTEM
+ ibrav              = 0,
+ ntyp               = 2, 
+ nat                = 3
+ nbnd               = 20
+ ecutwfc            = 40, 
+ ecutrho            = 320
+ occupations        = "smearing", 
+ smearing           = "gauss", 
+ degauss            = 0.01
+ tot_charge         = 0.0
+ assume_isolated    = "esm"
+ esm_bc             = "pbc"
+/
+&ELECTRONS
+ electron_maxstep   = 200, 
+ mixing_beta        = 0.1, 
+/
+&IONS
+/
+
+K_POINTS gamma
+
+ATOMIC_SPECIES
+O   16.00  o_pbe_v1.2.uspp.F.UPF
+H   1.008  h_pbe_v1.4.uspp.F.UPF
+
+CELL_PARAMETERS angstrom
+20.0 0.0 0.0
+0.0 20.0 0.0
+0.0 0.0 20.0
+
+ATOMIC_POSITIONS (angstrom)
+O                0.1113633659        0.1113633659       -0.0000012599
+H                0.5443240681        0.5443240681        0.7726255933
+H                0.5443125660        0.5443125660       -0.7726082351
+
+

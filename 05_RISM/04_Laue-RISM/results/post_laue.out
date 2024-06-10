@@ -1,0 +1,100 @@
+
+     Program POST-RISM v.7.3.1 starts on  8Jun2024 at 18:26:17 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    32 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      32
+     180048 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading xml data from directory:
+
+     output/opt.save/
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         709     354     88                80570    28490    3552
+     Max         712     356     90                80580    28504    3558
+     Sum       22733   11369   2845              2578383   911913  113801
+ 
+     Using Slab Decomposition
+ 
+
+     negative rho (up, down):  5.142E-03 0.000E+00
+
+     solvent charge   -0.00284, renormalised to    0.00000
+
+     Punching data of Laue-RISM
+     Writing data to file  opt.pprism
+     Reading header from file  opt.pprism
+     Reading data from file  opt.pprism
+
+     Writing data to be plotted to file opt.3drism_chg.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_v_solv.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_v_solu.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_v_tot.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#1_O.h2o.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#2_H.h2o.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#3_L.h2o.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#4_K.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#5_O.oh.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Writing data to be plotted to file opt.3drism_rho#6_H.oh.cube
+     Message from routine solvdens:
+     FOURIER is not done.
+
+     Plot Type     : 3D
+     Output format : Gaussian cube
+ 
+     POST-RISM    :   1m58.18s CPU   2m34.09s WALL
+
+ 
+   This run was terminated on:  18:28:51   8Jun2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

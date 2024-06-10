@@ -1,0 +1,84 @@
+&CONTROL
+   calculation      = 'scf'
+   nstep            = 200
+   tprnfor          = .true.
+   outdir           = './output'
+   prefix           = 'opt'
+   etot_conv_thr    = 1e-05
+   forc_conv_thr    = 0.0001
+   pseudo_dir       = '/beegfs/hotpool/mano/rism/RISM_example/pseudo'
+   lfcp             = .false.
+   trism            = .true.
+/
+&SYSTEM
+   ibrav            = 0
+   tot_charge       = 0.0
+   ecutwfc          = 40
+   ecutrho          = 320.0
+   nosym            = .true.
+   occupations      = 'smearing'
+   degauss          = 0.01
+   smearing         = 'gauss'
+   nspin            = 1
+   assume_isolated  = 'esm'
+   esm_bc           = 'bc1'
+   ntyp             = 2
+   nat              = 3
+/
+&ELECTRONS
+   electron_maxstep = 200
+   conv_thr         = 1e-08
+   mixing_beta      = 0.1
+/
+&IONS
+   upscale          = 1
+/
+&CELL
+/
+&FCP
+/
+&RISM
+   nsolv            = 3
+   closure          = 'kh'
+   tempv            = 300.0
+   ecutsolv         = 160.0
+   solute_lj(1)     = 'none'
+   solute_lj(2)     = 'none'
+   solute_epsilon(1) = 0.1554
+   solute_epsilon(2) = 0.046
+   solute_sigma(1)  = 3.166
+   solute_sigma(2)  = 1.0
+   starting1d       = 'zero'
+   starting3d       = 'zero'
+   rism1d_maxstep   = 15000
+   rism3d_maxstep   = 15000
+   rism1d_conv_thr  = 1e-08
+   rism3d_conv_thr  = 1e-06
+   mdiis1d_size     = 20
+   mdiis3d_size     = 20
+   mdiis1d_step     = 0.2
+   mdiis3d_step     = 0.1
+   rism3d_conv_level = 0.8
+   laue_expand_right = 60
+   laue_expand_left = 60
+/
+ATOMIC_SPECIES
+O 15.999 o_pbe_v1.2.uspp.F.UPF
+H 1.008 h_pbe_v1.4.uspp.F.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+19.99999964301650 0.00000000000000 0.00000000000000
+0.00000000000000 19.99999964301650 0.00000000000000
+0.00000000000000 0.00000000000000 19.99999964301650
+
+ATOMIC_POSITIONS angstrom
+O 0.1114739980 0.1114659980 -0.0000060000  
+H 0.5442639903 0.5442659903 0.7727439862  
+H 0.5442639903 0.5442679903 -0.7627419862  
+
+SOLVENTS {mol/L}
+H2O -1.0 H2O.tip5p.Nishihara.MOL
+K+   1.0 K+.Hagiwara.MOL
+OH-  1.0 OH-.oplsaa.MOL

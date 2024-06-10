@@ -1,0 +1,10 @@
+&dos 
+prefix ="opt"
+outdir ="output"
+bz_sum = "smearing"
+ngauss = 0
+degauss = 0.01
+DeltaE = 0.05
+fildos = "dos.dos"
+/
+

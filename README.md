@@ -96,28 +96,42 @@ For the different ways to consider the bias potential, the example 5) using meth
 - Slab under an electric field (metal/slab/metal)
 
 
-
---------------------------
-
-
-**will be updated later**
-
 ### 4. **IMPLICIT SOLVENT**
-1) Linearized Poisson-Boltzmann model
+1) H2O SCCS          
+2) H2O helmholtz linear
+3) H2O helmholtz nonlinear
+4) Helmholtz nonlinear 0.0 
+5) Helmholtz nonlinear -0.1
+6) Helmholtz nonlinear +0.1
+
 
 ### 5. **RISM (Reference interaction site model)**
+In this section, the reference interaction site model will be introduced. 
+The pair distribution of the solvent-solvent can be obtained from 1D-RISM calculation. 
+By integrating the pair distribution function, the coordination number can be obtained. 
+By doing this, we can compare out results to the experiment, which helps us in selecting the appropriate FF parameters. 
+The calculation of 3D-RISM is used in periodic system, while the Laue-RISM is used in mixed boundary system, 
+where z-direction is opened. In Laue-RISM, the charged slab calculation is allowed.
+
 1) 1D-RISM : pair distribution & coordination number
 2) 1D-RISM : Force field setting and solvation energy 
 3) 3D-RISM : For periodic system 
 4) Laue RISM : periodic in xy-plane and opened in z-direction
-5) The determination of SHE potential 
+
 
 ### 6. **ESM-RISM**
-1) The determination of PZC (potential of zero charge)
-2) Constant Ne (electrons) calculation 
-3) Constant mu (potential) calculation 
-4) Grand potential calculation 
-5) Adsorption energy as a function of potential
+In this section, we will obtain the standard hydrogen electrode (referenced to the inner potential inside bulk solution)
+as the origin of the electrode potential. The charged surfaces can be simulated by controling the number of electrons in the system. 
+Furthermore, the constant mu (chemical potential) is possible. 2 methods are implemented in QE,
+1. The fictitious charge particle (FCP) method
+N. Bonnet, T. Morishita, O. Sugino, and M. Otani,PRL 109, 266101 (2012)
+2. The grand canonical scf (GCSCF) method
+R. Sundararaman, W. A. Goddard-III, and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)
+
+1) The origin of the electrode potential (SHE)
+2) The screening of the charged slab 
+3) Grand canonical DFT 
+4) Grand potential 
 
 
 ### 7. **ASE (Atomic simulation environment)**

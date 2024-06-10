@@ -1,0 +1,14 @@
+&inputpp
+outdir  = 'output'
+prefix  = 'opt'
+lpunch  = .true.
+/
+&plot
+output_format = 6
+iflag = 3
+! nx = 160, ny = 160, nz = 160
+x0(1) = 0.0
+x0(2) = 0.0
+x0(3) = 0.0
+interpolation = 'fourier'
+/

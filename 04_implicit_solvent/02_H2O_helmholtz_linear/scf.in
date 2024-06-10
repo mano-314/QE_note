@@ -1,0 +1,45 @@
+&CONTROL
+   calculation      = 'scf'
+   tprnfor          = .true.
+   outdir           = './output'
+   prefix           = 'opt'
+   pseudo_dir       = '../../pseudo'
+/
+&SYSTEM
+   ibrav            = 0
+   ecutwfc          = 40
+   ecutrho          = 480.0
+   nspin            = 1
+   ntyp             = 2
+   nat              = 3
+/
+&ELECTRONS
+   electron_maxstep = 100
+   conv_thr         = 1e-06
+   mixing_beta      = 0.1
+/
+&IONS
+/
+&CELL
+/
+&FCP
+/
+&RISM
+/
+
+ATOMIC_SPECIES
+O 15.999 o_pbe_v1.2.uspp.F.UPF
+H 1.008 h_pbe_v1.4.uspp.F.UPF
+
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+10.00000000000000 0.00000000000000 0.00000000000000
+0.00000000000000 10.00000000000000 0.00000000000000
+0.00000000000000 0.00000000000000 10.00000000000000
+
+ATOMIC_POSITIONS (angstrom)
+O             5.0000000000        5.0000000000       5.3051675918
+H             5.0000000000        5.7691760338       4.6983389541
+H             5.0000000000        4.2308239662       4.6983389541
+

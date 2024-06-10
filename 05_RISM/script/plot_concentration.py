@@ -23,7 +23,8 @@ print(df)
 
 plt.figure(figsize=(8,4))
 for col in df.columns : 
-    y=df[col]
+    y=df[col].values
+    y-=y[-1]
     plt.plot(np.arange(len(y)),y,marker="o",markersize=3, label=col )
 plt.legend()
 plt.show()
