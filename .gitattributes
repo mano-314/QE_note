@@ -5,3 +5,8 @@
 *.esm1 linguist-vendored
 *.out linguist-vendored
 *.dat linguist-vendored
+*.cif linguist-vendored
+*.com linguist-vendored
+*.vasp linguist-vendored
+*.pwi linguist-vendored
+*.com linguist-vendored
