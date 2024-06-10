@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This code is used to collect the solvation energy from
+# the previously generated calculations
+# and print out for further analysis
+# $ bash energy.sh
+
 for H2O_file in \
 H2O.spc.Nishihara.MOL \
 H2O.spce.Nishihara.MOL \

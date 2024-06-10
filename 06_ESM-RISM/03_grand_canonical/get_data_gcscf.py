@@ -29,7 +29,7 @@ for match in re.finditer(pattern_fermi,text):
 #print("Energy : " , save_energy)
 #print("Fermi  : " , save_fermi)
 
-print("iter       energy      fermi    charge")
+print("#iter      energy      fermi    charge")
 for count in range(len(save_energy)):
     print("{:3d}  {:8.6f}  {:8.6f}  {:8.6f}".format(count , save_energy[count], save_fermi[count] , save_charge[count]) )
 

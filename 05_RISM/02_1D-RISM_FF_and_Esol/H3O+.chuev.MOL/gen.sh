@@ -1,5 +1,9 @@
 #!/bin/bash 
 
+# This script is used to generate the set of calculations
+# of 1D-RISM using various types of parametrization 
+# to compare the solvation energy to the experiments 
+# $ bash gen.sh
 
 H3O_file=H3O+.chuev.MOL
 Cl_file=Cl-.oplsaa.MOL
