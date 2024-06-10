@@ -127,6 +127,7 @@ Furthermore, the constant mu (chemical potential) is possible. 2 methods are imp
 N. Bonnet, T. Morishita, O. Sugino, and M. Otani,PRL 109, 266101 (2012)
 2. The grand canonical scf (GCSCF) method
 R. Sundararaman, W. A. Goddard-III, and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)
+And for the last topic, the grand potential calculation will be introduced. 
 
 1) The origin of the electrode potential (SHE)
 2) The screening of the charged slab 
