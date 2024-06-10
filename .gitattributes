@@ -3,3 +3,5 @@
 *.1drism linguist-vendored
 *.rism1 linguist-vendored
 *.esm1 linguist-vendored
+*.out linguist-vendored
+*.dat linguist-vendored
