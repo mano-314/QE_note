@@ -124,9 +124,9 @@ In this section, we will obtain the standard hydrogen electrode (referenced to t
 as the origin of the electrode potential. The charged surfaces can be simulated by controling the number of electrons in the system. 
 Furthermore, the constant mu (chemical potential) is possible. 2 methods are implemented in QE,
 1. The fictitious charge particle (FCP) method
-N. Bonnet, T. Morishita, O. Sugino, and M. Otani,PRL 109, 266101 (2012)
+[_N. Bonnet, T. Morishita, O. Sugino, and M. Otani,PRL 109, 266101 (2012)_]
 2. The grand canonical scf (GCSCF) method
-R. Sundararaman, W. A. Goddard-III, and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)
+[_R. Sundararaman, W. A. Goddard-III, and T. A. Arias, J. Chem. Phys. 146, 114104 (2017)_]
 
 And for the last topic, the grand potential calculation will be introduced. 
 
