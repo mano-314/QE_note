@@ -1,4 +1,4 @@
-from ase.calculators.espresso import Espresso
+from ase.calculators.espresso import Espresso, EspressoProfile
 from ase.io import read, write
 from ase.vibrations import Vibrations
 from ase.constraints import FixAtoms
@@ -10,13 +10,16 @@ from ase.optimize import BFGS
 
 # -------------------------------------------------- general setting for DFT in calculator
 
-pseudopotentials_dir = "/project/lt200240-ccoxrr/mano/02_for_rism/pseudo"
+pseudopotentials_dir = "../../pseudo"
 pseudopotentials = {"H" : "h_pbe_v1.4.uspp.F.UPF",
                     "O" : "o_pbe_v1.2.uspp.F.UPF" }
 
+profile = EspressoProfile(
+    command='mpirun -n 16 pw.x', pseudo_dir=pseudopotentials_dir
+)
+
 control = dict(
-    calculation = "scf",
-    pseudo_dir  = "/project/lt200240-ccoxrr/mano/02_for_rism/pseudo",
+    calculation = "relax",
     outdir      = "./output",
     prefix      = "opt",
     tprnfor     = True,
@@ -47,24 +50,28 @@ input_data = dict( control = control,
                    electrons=electrons,
                    ions=ions  )
 
-calc = Espresso( input_data=input_data,
+calc = Espresso( profile=profile,
+                 input_data=input_data,
                  pseudopotentials=pseudopotentials,
                  # kpts=kpts,koffset=koffset 
                )
 
 # -------------------------------------------------- pipline 
 
-# 1) making atoms or importing atoms 
+# 1) making atoms or importing atoms
 atoms=read("water.vasp",format="vasp")
 
 
-# 2) set the calculator 
+# 2) set the calculator
 atoms.calc=calc
 
 
-# 3) optimize the structure
-opt = BFGS(atoms, trajectory='relax.traj', logfile='relax.log')
-opt.run(fmax=0.01)
-write("final_structure.vasp",atoms,format="vasp")
+# 3) control ase to do static calculation but relax in QE loop
+atoms.get_potential_energy()
+
+atoms_opt=read("espresso.pwo",index=-1)
+write("final_structure.vasp",atoms_opt,format="vasp")
+
+
 
 

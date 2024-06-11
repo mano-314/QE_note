@@ -1,54 +1,46 @@
-from ase.calculators.espresso import Espresso
+from ase.calculators.espresso import Espresso, EspressoProfile
 from ase.io.espresso import write_espresso_in
 from ase.io import read, write
 from ase.vibrations import Vibrations
 from ase.constraints import FixAtoms
-from ase.thermochemistry import HarmonicThermo
+from ase.thermochemistry import HarmonicThermo, IdealGasThermo
 import sys
 import numpy as np
 argv=sys.argv[1:]
 input_structure=argv[0]
 
-# -------------------------------------------------- select mode
+# -------------------------------------------------- general setting
 
-run_mode       = False
-geninput_mode  = True
-
+run_mode       = True
 relax_mode     = False
-scf_mode       = True
-vibration_mode = False
+scf_mode       = False
+vibration_mode = True
+geninput_mode  = False
+set_constraint = False
 
-set_constraint = True
-
-trism          = False
+trism          = True
 lfcp           = False
 charge         = 0.0
 
-# -------------------------------------------------- general setting for DFT 
-
-pseudopotentials_dir = "/project/lt200240-ccoxrr/mano/02_for_rism/pseudo"
-
-
-pseudopotentials = {'Cu': 'cu_pbe_v1.2.uspp.F.UPF',
-                    "H" : "h_pbe_v1.4.uspp.F.UPF",
-                    "C" : "c_pbe_v1.2.uspp.F.UPF",
-                    'N' : 'n_pbe_v1.2.uspp.F.UPF',
-                    'O' : 'o_pbe_v1.2.uspp.F.UPF',
-                    }
+pseudopotentials_dir = "/beegfs/hotpool/mano/rism/RISM_example/pseudo"
+pseudopotentials = {
+    "H" : "h_pbe_v1.4.uspp.F.UPF",
+    "O" : 'o_pbe_v1.2.uspp.F.UPF' }
 
 additional_cards = ["SOLVENTS {mol/L}",
                     "H2O -1.0 H2O.tip5p.Nishihara.MOL",
-                    "H3O+ 1.0 H3O+.Bonthuls.Nishihara.MOL",
-                    "NO3- 1.0 NO3-.Anagnostopoulos.MOL" ]
+                    "K+   1.0 K+.Hagiwara.MOL",
+                    "OH-  1.0 OH-.oplsaa.MOL" ]
 
 lj_parameter_database={
-    "Cu":{"epsilon":0.05,   "sigma":3.60},
     "H" :{"epsilon":0.046,  "sigma":1.00},
-    "C" :{"epsilon":0.07,   "sigma":3.55},
-    "N" :{"epsilon":0.17,   "sigma":3.25},
-    "O" :{"epsilon":0.1554, "sigma":3.166}
-}
+    "O" :{"epsilon":0.1554, "sigma":3.166} }
 
+profile = EspressoProfile(
+    command='mpirun -n 32 pw.x', pseudo_dir=pseudopotentials_dir
+)
+
+# -------------------------------------------------- DFT input
 
 if relax_mode:
     calculation_tag="relax"
@@ -82,7 +74,6 @@ system = dict(
     smearing    = "gauss",
     degauss     = 0.01,
     nspin       = 1,
-    input_dft   = "vdw-df2-b86r",
     nosym       = True,
     )
 
@@ -94,9 +85,10 @@ system_update=dict(
 
 electrons=dict(
     electron_maxstep=200,
-    conv_thr=1.E-6,
+    conv_thr=1.E-8,
     mixing_beta=0.1,
-    diagonalization='david',
+    # diagonalization='rmm',
+    # startingwfc='file',
     )
 
 ions=dict(
@@ -126,12 +118,12 @@ rism = dict(
    rism3d_conv_level = 0.8,
    mdiis3d_size      = 20,
    mdiis3d_step      = 0.1,
-   laue_buffer_right = 4.0,
-   laue_expand_right = 60,
+   laue_expand_left = 60,
+   laue_expand_right = 60
     )
 
-kpts=(2, 2, 1)
-koffset=(1, 1, 0)
+kpts=(1, 1, 1)
+koffset=(0, 0, 0)
 
 # --------------------------------------------reading and setting DFT
 
@@ -187,21 +179,21 @@ else:
 if vibration_mode:
     control["calculation"] = "scf"
     electrons["conv_thr"] = 1.E-8
+    #rism["starting1d"] = 'file'
+    #rism["starting3d"] = 'file'
 
 # set calculator
-calc = Espresso(
+calc = Espresso(profile=profile,
                 input_data=input_data,
                 pseudopotentials=pseudopotentials,
                 additional_cards=additional_cards,
-                kpts=kpts,koffset=koffset
+#                kpts=kpts,koffset=koffset
                 )
 atoms.calc=calc
 
 # set constraints
 if set_constraint:
-    # indices_fixing=[atom.index for atom in atoms if atom.position[2]< 11.0 ]
     indices_fixing=[atom.index for atom in atoms if atom.position[2]< 0.0 ]
-    # indices_fixing=[atom.index for atom in atoms if atom.symbol == "Cu" ]
     c=FixAtoms(indices=indices_fixing)
     atoms.set_constraint(c)
     print("set constraint on atom index  : " , indices_fixing )
@@ -214,13 +206,13 @@ if run_mode :
         if relax_mode:
             print("performing relax mode")
         elif scf_mode:
-             print("performing scf mode")
+            print("performing scf mode")
 
-        write("POSCAR_init",atoms,format="vasp")
+        #write("POSCAR_init",atoms,format="vasp")
         atoms.get_potential_energy()
 
         opt_atoms=read("espresso.pwo",format="espresso-out",index=-1)
-        write("POSCAR_opt",opt_atoms,format="vasp")
+        write("opt.vasp",opt_atoms,format="vasp")
 
 
     if vibration_mode:
@@ -237,10 +229,20 @@ if run_mode :
 
         vib_energies = vib.get_energies()
         vib_energies_real=vib_energies[np.isreal(vib_energies)]
+        
+        """
         thermo = HarmonicThermo(vib_energies=vib_energies_real,
                 potentialenergy=0.0)
         entro = thermo.get_entropy(temperature=298.15, verbose=True)
         inter = thermo.get_internal_energy(temperature=298.15, verbose=True)
+        """
+
+        thermo = IdealGasThermo(vib_energies=vib_energies,
+                        potentialenergy=0,
+                        atoms=atoms,
+                        geometry='nonlinear', spin=0, 
+                        symmetrynumber=2 )
+        G = thermo.get_gibbs_energy(temperature=298.15, pressure=101325.)
 
 
 if geninput_mode:
@@ -250,7 +252,7 @@ if geninput_mode:
                       atoms,
                       input_data,
                       pseudopotentials=pseudopotentials,
-                      kpts=kpts,koffset=koffset,
+#                      kpts=kpts,koffset=koffset,
                       crystal_coordinates=False,
                       additional_cards=additional_cards)
     fileout.close()
