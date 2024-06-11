@@ -4,7 +4,7 @@
    tprnfor          = .true.
    outdir           = './output'
    prefix           = 'opt'
-   pseudo_dir       = '/project/lt200240-ccoxrr/mano/02_for_rism/pseudo'
+   pseudo_dir       = '../../pseudo'
 /
 &SYSTEM
    ibrav            = 0
