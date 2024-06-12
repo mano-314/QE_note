@@ -11,17 +11,8 @@ https://www.physics.rutgers.edu/gbrv/
 
 
 ## Force field for rism
-H2O.spce.Nishihara.MOL
-H2O.tip5p.Nishihara.MOL
-H2O.spc.Nishihara.MOL
-H2O.spce.Chuev.MOL
-H2O.spce.Matsugami.MOL
-H3O+.Bonthuls.Nishihara.MOL
-H3O+.chuev.MOL
-Cl-.oplsaa.MOL
-K+.Hagiwara.MOL
-K+.aq.MOL
-OH-.Bonthuls.MOL
-OH-.aq.MOL
-OH-.oplsaa.MOL
+
+We can download MOL files for RISM from 
+
+https://github.com/nisihara1/MOLs
 
